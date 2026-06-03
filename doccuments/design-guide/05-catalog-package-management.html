@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Catalog Package Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0f5f4a;--primary-700:#0a4638;--primary-50:#e8f5f0;--navy:#10233f;--accent:#c8922e;--bg:#f6f8f7;--surface:#fff;--surface-2:#eef3f1;--border:#dce4e1;--text:#15211d;--muted:#64736e;--success:#138a55;--success-bg:#e5f6ee;--warning:#b86b00;--warning-bg:#fff3d8;--danger:#c93232;--danger-bg:#fde8e8;--info:#225bb8;--info-bg:#e9f0ff;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22);--sidebar:248px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--font-body);font-size:14px;color:var(--text)}h1,h2,h3{font-family:var(--font-display);color:var(--navy);margin:0;line-height:1.12}p{margin:0;color:var(--muted)}a{color:inherit}.app{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}.side{background:var(--navy);color:#fff;padding:20px}.logo{display:block;font-weight:800;margin-bottom:22px;color:#fff;text-decoration:none}.nav{display:grid;gap:6px}.nav a{color:#dbe5e1;text-decoration:none;padding:10px 12px;border-radius:8px}.nav a.active,.nav a:hover{background:rgba(255,255,255,.12)}.top{height:60px;background:#fff;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 24px}.content{padding:24px}.head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--navy);font-weight:800;text-decoration:none}.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn-ghost{background:transparent}.btn:focus-visible,input:focus,select:focus,textarea:focus{outline:none;box-shadow:var(--focus);border-color:var(--primary)}.panel{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:var(--shadow)}.setup{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:12px;border:1px solid var(--border);border-radius:8px;background:#fff}.step strong{display:block;color:var(--navy)}.num{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;background:var(--primary-50);color:var(--primary);font-weight:800}.step.current{border-color:#cfe6dd;background:var(--primary-50)}.tabs{display:flex;gap:6px;overflow:auto;margin:0 0 14px}.tabs a{white-space:nowrap;text-decoration:none;padding:9px 12px;border:1px solid var(--border);border-radius:8px;background:#fff;font-weight:800;color:var(--navy)}.tabs a.active{background:var(--primary);border-color:var(--primary);color:#fff}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.toolbar{display:grid;grid-template-columns:1fr 160px 160px;gap:10px;margin:14px 0}.input,select,textarea{min-height:38px;border:1px solid var(--border);border-radius:8px;padding:8px 10px;background:#fff;width:100%;font:inherit;color:var(--text)}.table{width:100%;border-collapse:collapse}.table th{font-size:11px;text-transform:uppercase;color:var(--muted);text-align:left;background:var(--surface-2)}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}.badge{display:inline-flex;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.success{background:var(--success-bg);color:var(--success)}.warning{background:var(--warning-bg);color:var(--warning)}.danger{background:var(--danger-bg);color:var(--danger)}.info{background:var(--info-bg);color:var(--info)}.gold{background:#FFF3D6;color:#8A5A00}.builder{display:grid;gap:10px;margin-top:12px}.stage{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}.stage-head{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;background:var(--surface-2);border-bottom:1px solid var(--border)}.line{display:grid;grid-template-columns:1.1fr .8fr .7fr auto;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--border)}.line:last-child{border-bottom:0}.total{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px;border-radius:8px;background:var(--primary-50);border:1px solid #cfe6dd;margin-top:12px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.field{display:grid;gap:5px}.field.wide{grid-column:1/-1}.label{font-size:11px;text-transform:uppercase;font-weight:800;color:var(--muted)}.hint{font-size:12px;color:var(--muted)}.modal{display:none;position:fixed;inset:0;background:rgba(16,35,63,.52);z-index:10;padding:24px;overflow:auto}.modal:target{display:grid;place-items:start center}.dialog{width:min(760px,100%);background:#fff;border-radius:8px;border:1px solid var(--border);box-shadow:0 24px 60px rgba(16,35,63,.24);margin-top:24px}.dialog-head{display:flex;justify-content:space-between;gap:12px;align-items:start;padding:16px;border-bottom:1px solid var(--border)}.dialog-body{padding:16px}.dialog-foot{display:flex;justify-content:flex-end;gap:8px;padding:14px 16px;border-top:1px solid var(--border);background:var(--surface-2)}.prototype-flow-nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid #dce4e1;border-radius:8px;background:#ffffff;box-shadow:0 8px 24px rgba(16,35,63,.08);font-family:Manrope,Helvetica,sans-serif}@media(max-width:980px){.app,.layout,.setup,.toolbar,.form-grid{grid-template-columns:1fr}.content{padding:16px}.head{display:block}.actions{margin-top:12px}.line{grid-template-columns:1fr}.dialog{margin-top:0}.modal{padding:12px}}
+  </style>
+</head>
+<body>
+  <!-- SCREEN: route=/catalog/packages; user=Owner primary, Consultant read-only variant; purpose=visualize the full owner setup workflow for country, university, program, and stage-wise package pricing; components=app shell, setup stepper, catalog tabs, entity tables, package builder, CSS anchor modals; states=active, missing package, one-active-package warning, owner-only commission field; responsive=single-column mobile. -->
+  <div class="app">
+    <aside class="side">
+      <a class="logo" href="index.html">ADMISSIONS OS</a>
+      <nav class="nav"><a href="02-owner-dashboard.html">Dashboard</a><a class="active" href="05-catalog-package-management.html">Catalog</a><a href="#university-modal">Universities</a><a href="#program-modal">Programs</a><a href="#package-modal">Packages</a><a href="16-staff-user-management.html">Users</a></nav>
+    </aside>
+    <div>
+      <header class="top"><strong>Owner catalog setup</strong><span>Consultants can browse active records only</span></header>
+      <main class="content">
+        <header class="head">
+          <div><h1>Catalog and package management</h1><p>Build the master catalog before consultants can counsel students or open a file.</p></div>
+          <div class="actions"><a class="btn" href="#country-modal">Add country</a><a class="btn" href="#university-modal">Add university</a><a class="btn" href="#program-modal">Add program</a><a class="btn btn-primary" href="#package-modal">Build package</a></div>
+        </header>
+
+        <section class="setup" aria-label="Catalog setup sequence">
+          <article class="step current"><span class="num">1</span><div><strong>Country</strong><p>Destination, currency, visa type.</p></div></article>
+          <article class="step current"><span class="num">2</span><div><strong>University</strong><p>Partner details and owner-only commission default.</p></div></article>
+          <article class="step current"><span class="num">3</span><div><strong>Program</strong><p>Level, field, intake, duration, requirements.</p></div></article>
+          <article class="step"><span class="num">4</span><div><strong>Package</strong><p>Stage-wise fees and one active package.</p></div></article>
+        </section>
+
+        <nav class="tabs" aria-label="Catalog setup tabs"><a class="active" href="#country-modal">Countries</a><a href="#university-modal">Universities</a><a href="#programs">Programs</a><a href="#packages">Package builder</a><a href="#package-modal">Open setup modal</a></nav>
+
+        <section class="layout">
+          <article class="panel" id="programs">
+            <h2>Catalog records</h2>
+            <div class="toolbar"><input class="input" value="Malaysia"><select><option>All universities</option></select><select><option>Package status</option></select></div>
+            <table class="table">
+              <thead><tr><th>Program</th><th>University</th><th>Country</th><th>Setup status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>BSc Computer Science<br><span class="hint">Bachelor - 4 years - September intake</span></td><td>MMU<br><span class="hint">Cyberjaya</span></td><td>Malaysia</td><td><span class="badge success">Active package</span></td><td><a class="btn" href="#package-modal">Edit package</a></td></tr>
+                <tr><td>BBA International Business<br><span class="hint">Bachelor - 3.5 years - Jan, May intake</span></td><td>UTM<br><span class="hint">Johor Bahru</span></td><td>Malaysia</td><td><span class="badge success">Active package</span></td><td><a class="btn" href="#package-modal">Edit package</a></td></tr>
+                <tr><td>MSc Data Analytics<br><span class="hint">Master - 1.5 years - September intake</span></td><td>APU<br><span class="hint">Kuala Lumpur</span></td><td>Malaysia</td><td><span class="badge warning">No active package</span></td><td><a class="btn btn-primary" href="#package-modal">Build package</a></td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <aside class="panel" id="packages">
+            <h2>Package builder preview</h2>
+            <p>Attached to MMU BSc Computer Science. These line items become the snapshot copied to a student file.</p>
+            <div class="builder">
+              <section class="stage">
+                <div class="stage-head"><strong>Stage 1 - File Opening</strong><span class="badge success">BDT 25,000</span></div>
+                <div class="line"><span>Agency Service Charge</span><span>Agency charge</span><strong>BDT 25,000</strong><a href="#package-modal">Edit</a></div>
+              </section>
+              <section class="stage">
+                <div class="stage-head"><strong>Stage 2 - Admission</strong><span class="badge success">BDT 180,000</span></div>
+                <div class="line"><span>University Admission Fee</span><span>University charge</span><strong>BDT 60,000</strong><a href="#package-modal">Edit</a></div>
+                <div class="line"><span>First Semester Fee</span><span>University charge</span><strong>BDT 120,000</strong><a href="#package-modal">Edit</a></div>
+              </section>
+              <section class="stage">
+                <div class="stage-head"><strong>Stage 3 - Visa</strong><span class="badge success">BDT 220,000</span></div>
+                <div class="line"><span>Agency Visa Processing</span><span>Agency charge</span><strong>BDT 35,000</strong><a href="#package-modal">Edit</a></div>
+                <div class="line"><span>Embassy / Government Fee</span><span>Government fee</span><strong>BDT 25,000</strong><a href="#package-modal">Edit</a></div>
+                <div class="line"><span>University Deposit</span><span>University charge</span><strong>BDT 160,000</strong><a href="#package-modal">Edit</a></div>
+              </section>
+            </div>
+            <div class="total"><div><strong>Total package cost: BDT 425,000</strong><p>Only one package can be active for this program.</p></div><span class="badge gold">Owner-only commission default hidden from consultants</span></div>
+          </aside>
+        </section>
+        <section class="panel" style="margin-top:14px">
+          <h2>Package version history and snapshot protection</h2>
+          <p>When a new package is activated, the previous active package is automatically deactivated. Existing student files keep the package snapshot copied at file creation.</p>
+          <table class="table" style="margin-top:12px">
+            <thead><tr><th>Package</th><th>Valid period</th><th>Total</th><th>Status</th><th>Effect on existing files</th></tr></thead>
+            <tbody>
+              <tr><td>BSc CS Standard Package 2026</td><td>2026-06-01 to open-ended</td><td>BDT 425,000</td><td><span class="badge success">Active</span></td><td>New files use this snapshot.</td></tr>
+              <tr><td>BSc CS Standard Package 2025</td><td>2025-01-01 to 2026-05-31</td><td>BDT 398,000</td><td><span class="badge info">Historical</span></td><td>Older files keep original BDT 398,000 fees.</td></tr>
+              <tr><td>BSc CS Draft 2027</td><td>Draft</td><td>BDT 452,000</td><td><span class="badge warning">Draft</span></td><td>No effect until Owner activates.</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <section class="modal" id="country-modal" role="dialog" aria-modal="true" aria-labelledby="country-title">
+    <div class="dialog">
+      <header class="dialog-head"><div><h2 id="country-title">Add destination country</h2><p>Countries group universities and carry currency and visa context.</p></div><a class="btn" href="05-catalog-package-management.html">Close</a></header>
+      <div class="dialog-body"><div class="form-grid"><label class="field"><span class="label">Country name</span><input class="input" value="Malaysia"></label><label class="field"><span class="label">ISO code</span><input class="input" value="MY"></label><label class="field"><span class="label">Currency</span><input class="input" value="MYR / BDT quotation"></label><label class="field"><span class="label">Visa type</span><input class="input" value="Malaysia Student Pass"></label><label class="field wide"><span class="label">Internal notes</span><textarea rows="3">Embassy and processing notes for admission and visa teams.</textarea></label></div></div>
+      <footer class="dialog-foot"><a class="btn" href="05-catalog-package-management.html">Cancel</a><a class="btn btn-primary" href="#university-modal">Save country and add university</a></footer>
+    </div>
+  </section>
+
+  <section class="modal" id="university-modal" role="dialog" aria-modal="true" aria-labelledby="university-title">
+    <div class="dialog">
+      <header class="dialog-head"><div><h2 id="university-title">Add partner university</h2><p>Only universities in the catalog can be selected during file opening.</p></div><a class="btn" href="05-catalog-package-management.html">Close</a></header>
+      <div class="dialog-body"><div class="form-grid"><label class="field"><span class="label">Country</span><select><option>Malaysia</option></select></label><label class="field"><span class="label">University name</span><input class="input" value="Multimedia University"></label><label class="field"><span class="label">Short name</span><input class="input" value="MMU"></label><label class="field"><span class="label">City</span><input class="input" value="Cyberjaya"></label><label class="field"><span class="label">Admission email</span><input class="input" value="admissions@mmu.edu.my"></label><label class="field"><span class="label">Contact phone</span><input class="input" value="+60 3 8312 5000"></label><label class="field"><span class="label">Default commission</span><input class="input" value="BDT 85,000"></label><label class="field"><span class="label">Commission type</span><select><option>Flat amount</option><option>Percentage</option></select></label><label class="field wide"><span class="label">Address / relationship notes</span><textarea rows="3">Owner-only commission default is hidden from consultants.</textarea></label></div></div>
+      <footer class="dialog-foot"><a class="btn" href="05-catalog-package-management.html">Cancel</a><a class="btn btn-primary" href="#program-modal">Save university and add program</a></footer>
+    </div>
+  </section>
+
+  <section class="modal" id="program-modal" role="dialog" aria-modal="true" aria-labelledby="program-title">
+    <div class="dialog">
+      <header class="dialog-head"><div><h2 id="program-title">Add university program</h2><p>Programs are browsed by consultants and must have an active package before file opening.</p></div><a class="btn" href="05-catalog-package-management.html">Close</a></header>
+      <div class="dialog-body"><div class="form-grid"><label class="field"><span class="label">University</span><select><option>MMU - Multimedia University</option></select></label><label class="field"><span class="label">Program name</span><input class="input" value="Bachelor of Computer Science"></label><label class="field"><span class="label">Short name</span><input class="input" value="BSc CS"></label><label class="field"><span class="label">Level</span><select><option>Bachelor</option><option>Master</option></select></label><label class="field"><span class="label">Field of study</span><input class="input" value="Computer Science"></label><label class="field"><span class="label">Duration</span><input class="input" value="4 years"></label><label class="field"><span class="label">Intake months</span><input class="input" value="January, May, September"></label><label class="field"><span class="label">Language requirement</span><input class="input" value="IELTS 6.0 or equivalent"></label><label class="field wide"><span class="label">Entry requirements</span><textarea rows="3">HSC or equivalent with science background; math preferred.</textarea></label></div></div>
+      <footer class="dialog-foot"><a class="btn" href="05-catalog-package-management.html">Cancel</a><a class="btn btn-primary" href="#package-modal">Save program and build package</a></footer>
+    </div>
+  </section>
+
+  <section class="modal" id="package-modal" role="dialog" aria-modal="true" aria-labelledby="package-title">
+    <div class="dialog">
+      <header class="dialog-head"><div><h2 id="package-title">Build active program package</h2><p>Stage-wise line items reduce consultant fee errors and create the student-facing package summary.</p></div><a class="btn" href="05-catalog-package-management.html">Close</a></header>
+      <div class="dialog-body">
+        <div class="form-grid"><label class="field"><span class="label">Program</span><select><option>MMU - BSc Computer Science</option></select></label><label class="field"><span class="label">Package name</span><input class="input" value="BSc CS Standard Package 2026"></label><label class="field"><span class="label">Currency</span><select><option>BDT</option><option>MYR</option></select></label><label class="field"><span class="label">Valid from</span><input class="input" value="2026-06-01"></label></div>
+        <div class="builder">
+          <section class="stage"><div class="stage-head"><strong>File Opening line items</strong><span class="badge success">BDT 25,000</span></div><div class="line"><input class="input" value="Agency Service Charge"><select><option>Agency charge</option></select><input class="input" value="25000"><span class="badge success">Mandatory</span></div></section>
+          <section class="stage"><div class="stage-head"><strong>Admission line items</strong><span class="badge success">BDT 180,000</span></div><div class="line"><input class="input" value="University Admission Fee"><select><option>University charge</option></select><input class="input" value="60000"><span class="badge success">Mandatory</span></div><div class="line"><input class="input" value="First Semester Fee"><select><option>University charge</option></select><input class="input" value="120000"><span class="badge success">Mandatory</span></div></section>
+          <section class="stage"><div class="stage-head"><strong>Visa line items</strong><span class="badge success">BDT 220,000</span></div><div class="line"><input class="input" value="Agency Visa Processing"><select><option>Agency charge</option></select><input class="input" value="35000"><span class="badge success">Mandatory</span></div><div class="line"><input class="input" value="Embassy / Government Visa Fee"><select><option>Government fee</option></select><input class="input" value="25000"><span class="badge success">Mandatory</span></div><div class="line"><input class="input" value="University Deposit"><select><option>University charge</option></select><input class="input" value="160000"><span class="badge success">Mandatory</span></div></section>
+        </div>
+        <div class="total"><div><strong>Calculated total: BDT 425,000</strong><p>Activating this package deactivates any older active package for this program.</p></div><span class="badge warning">One active package rule</span></div>
+      </div>
+      <footer class="dialog-foot"><a class="btn" href="05-catalog-package-management.html">Save draft</a><a class="btn btn-primary" href="06-counselling-program-selection.html">Activate package and continue to counselling</a></footer>
+    </div>
+  </section>
+
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation">
+    <a href="04-accounts-dashboard.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">&larr; Previous: Accounts Dashboard</a>
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #0f5f4a;color:#fff;text-decoration:none;font-weight:800;background:#0f5f4a;">Flow Index</a>
+    <a href="06-counselling-program-selection.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">Next: Counselling Selection &rarr;</a>
+  </nav>
+  <!-- COMPONENT TREE: OwnerShell -> SetupStepper -> CatalogTabs -> ProgramTable -> PackageBuilderPreview -> PackageVersionHistory -> CountryModal -> UniversityModal -> ProgramModal -> PackageModal. -->
+</body>
+</html>

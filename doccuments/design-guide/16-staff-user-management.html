@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Staff User Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0f5f4a;--primary-700:#0a4638;--primary-50:#e8f5f0;--navy:#10233f;--navy-700:#0a1629;--accent:#c8922e;--bg:#f6f8f7;--surface:#fff;--surface-2:#eef3f1;--border:#dce4e1;--text:#15211d;--muted:#64736e;--success:#138a55;--success-bg:#e5f6ee;--warning:#b86b00;--warning-bg:#fff3d8;--danger:#c93232;--danger-bg:#fde8e8;--info:#225bb8;--info-bg:#e9f0ff;--hold:#6b5fb8;--hold-bg:#efedff;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--r8:8px;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22);--sidebar:248px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--font-body);font-size:14px;color:var(--text);line-height:1.45}h1,h2,h3{font-family:var(--font-display);color:var(--navy);margin:0;line-height:1.12}p{margin:0;color:var(--muted)}a{color:inherit}.app{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}.side{background:var(--navy);color:#fff;padding:20px;position:sticky;top:0;height:100vh}.logo{display:block;font-weight:800;margin-bottom:22px;color:#fff;text-decoration:none}.nav{display:grid;gap:6px}.nav a{color:#dbe5e1;text-decoration:none;padding:10px 12px;border-radius:8px}.nav a.active,.nav a:hover{background:rgba(255,255,255,.12);color:#fff}.main{min-width:0}.top{height:60px;background:#fff;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 24px}.content{padding:24px}.head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--navy);font-weight:800;text-decoration:none}.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn-danger{background:var(--danger);border-color:var(--danger);color:#fff}.btn:focus-visible,.input:focus,.select:focus,textarea:focus{outline:none;box-shadow:var(--focus);border-color:var(--primary)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.layout{display:grid;grid-template-columns:1.45fr .85fr;gap:14px;margin-top:14px}.panel{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:var(--shadow)}.metric strong{display:block;font-size:25px;color:var(--navy);margin-top:4px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:830px}.table th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.02em;background:var(--surface-2)}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800;white-space:nowrap}.success{background:var(--success-bg);color:var(--success)}.warning{background:var(--warning-bg);color:var(--warning)}.danger{background:var(--danger-bg);color:var(--danger)}.info{background:var(--info-bg);color:var(--info)}.hold{background:var(--hold-bg);color:var(--hold)}.gold{background:#fff3d6;color:#8a5a00}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tabs a{border:1px solid var(--border);border-radius:8px;background:#fff;padding:9px 12px;text-decoration:none;font-weight:800;color:var(--navy)}.tabs a.active,.tabs a:hover{border-color:var(--primary);background:var(--primary-50);color:var(--primary)}.form{display:grid;gap:10px}.field{display:grid;gap:5px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.02em;font-weight:800;color:var(--muted)}.input,.select,textarea{width:100%;min-height:38px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:8px 10px;color:var(--text);font:inherit}.check{display:grid;grid-template-columns:20px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--border)}.role-card{display:grid;gap:8px;border:1px solid var(--border);border-radius:8px;padding:12px}.role-card strong{color:var(--navy)}.audit{display:grid;gap:10px}.audit-row{display:grid;grid-template-columns:1fr auto;gap:10px;border:1px solid var(--border);border-radius:8px;padding:10px}.blocked{border:1px solid #f0b7b7;background:var(--danger-bg);border-radius:8px;padding:12px}.modal{display:none;position:fixed;inset:0;background:rgba(16,35,63,.44);z-index:3;padding:22px;overflow:auto}.modal:target{display:grid;place-items:start center}.dialog{width:min(100%,840px);background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);padding:18px}.dialog-head{display:flex;justify-content:space-between;gap:14px;align-items:start;margin-bottom:14px}.dialog-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.permission{display:grid;gap:8px;border:1px solid var(--border);border-radius:8px;padding:12px;background:var(--surface-2)}.full{grid-column:1/-1}@media(max-width:900px){.app{grid-template-columns:1fr}.side{position:static;height:auto}.top{padding:0 16px}.content{padding:16px}.grid,.layout,.dialog-grid{grid-template-columns:1fr}.head{display:block}.table{min-width:760px}}
+  </style>
+</head>
+<body>
+  <!-- SCREEN: route=/owner/users; user=Owner/Admin; purpose=create, activate, deactivate, and audit staff accounts for Consultant, Accounts, Admission, and Visa roles; components=owner shell, staff metrics, staff table, role template cards, account form modal, permission preview, audit log; states=active, invited, suspended, blocked unauthorized role edit, deactivation warning; responsive=sidebar stacks, tables scroll horizontally, forms collapse to one column. -->
+  <div class="app">
+    <aside class="side">
+      <a class="logo" href="index.html">ADMISSIONS OS</a>
+      <nav class="nav" aria-label="Owner navigation">
+        <a href="02-owner-dashboard.html">Dashboard</a>
+        <a href="08-student-file-detail.html">Files</a>
+        <a href="05-catalog-package-management.html">Catalog</a>
+        <a href="09-payment-deposit-workbench.html">Payments</a>
+        <a href="12-commission-tracking.html">Commissions</a>
+        <a href="13-reports-and-dashboards.html">Reports</a>
+        <a class="active" href="16-staff-user-management.html">Users</a>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="top"><strong>Owner workspace</strong><span>User management is Owner-only</span></header>
+      <main class="content">
+        <header class="head">
+          <div>
+            <h1>Staff and access management</h1>
+            <p>Create consultants, accounts staff, admission staff, and visa employees with role-scoped access before they can log in.</p>
+          </div>
+          <a class="btn btn-primary" href="#create-user"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg>Create staff user</a>
+        </header>
+
+        <section class="grid" aria-label="Staff account metrics">
+          <article class="panel metric"><p>Active staff</p><strong>18</strong><p>5 consultants, 3 accounts, 4 admission, 4 visa, 2 owners</p></article>
+          <article class="panel metric"><p>Pending invitations</p><strong>3</strong><p>Temporary passwords not changed yet</p></article>
+          <article class="panel metric"><p>Suspended users</p><strong>1</strong><p>Access removed, history preserved</p></article>
+          <article class="panel metric"><p>Owner overrides</p><strong>7</strong><p class="badge gold">Audit required</p></article>
+        </section>
+
+        <nav class="tabs" aria-label="Staff management tabs">
+          <a class="active" href="#create-user">Create user</a>
+          <a href="#role-templates">Role templates</a>
+          <a href="#assign-consultant">File assignment</a>
+          <a href="#deactivate-user">Deactivate user</a>
+          <a href="#audit-log">Access audit</a>
+        </nav>
+
+        <section class="layout">
+          <article class="panel">
+            <h2>Staff accounts</h2>
+            <p>Owner manages every internal employee account. External students and universities are not system users in Phase 1.</p>
+            <div class="table-wrap" style="margin-top:12px">
+              <table class="table" aria-label="Staff accounts">
+                <thead><tr><th>Name</th><th>Role</th><th>Department</th><th>Data scope</th><th>Status</th><th>Last activity</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr><td>Nusrat Jahan</td><td>Consultant</td><td>Counselling</td><td>Own assigned files only</td><td><span class="badge success">Active</span></td><td>Uploaded transcript PDF</td><td><a class="btn" href="#assign-consultant">Assign files</a></td></tr>
+                  <tr><td>Arif Rahman</td><td>Consultant</td><td>Counselling</td><td>Own assigned files only</td><td><span class="badge success">Active</span></td><td>Created MY-2026-0161</td><td><a class="btn" href="#deactivate-user">Suspend</a></td></tr>
+                  <tr><td>Mahmuda Akter</td><td>Accounts</td><td>Accounts</td><td>Payment records and dues</td><td><span class="badge success">Active</span></td><td>Confirmed CASH-0603-014</td><td><a class="btn" href="#role-templates">View scope</a></td></tr>
+                  <tr><td>Sabbir Hossain</td><td>Admission</td><td>Admission</td><td>Admission files and academic docs</td><td><span class="badge warning">Invited</span></td><td>Temporary password pending</td><td><a class="btn" href="#create-user">Resend invite</a></td></tr>
+                  <tr><td>Rumana Sultana</td><td>Visa</td><td>Visa</td><td>Visa docs and outcomes</td><td><span class="badge success">Active</span></td><td>Recorded visa submission</td><td><a class="btn" href="#role-templates">View scope</a></td></tr>
+                  <tr><td>Former Staff</td><td>Consultant</td><td>Counselling</td><td>No login access</td><td><span class="badge danger">Suspended</span></td><td>History retained</td><td><a class="btn" href="#audit-log">Audit</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <aside class="panel">
+            <h2>Permission guardrails</h2>
+            <div class="blocked" style="margin-top:12px">
+              <strong>Blocked for non-owner roles</strong>
+              <p>Consultant, Accounts, Admission, and Visa users cannot create users, change roles, or open this workspace.</p>
+            </div>
+            <div class="form" style="margin-top:12px">
+              <div class="check"><input type="checkbox" checked disabled><span>Owner can manage users</span><span class="badge success">Allowed</span></div>
+              <div class="check"><input type="checkbox" disabled><span>Consultant can manage users</span><span class="badge danger">Denied</span></div>
+              <div class="check"><input type="checkbox" disabled><span>Accounts can view documents</span><span class="badge danger">Denied</span></div>
+              <div class="check"><input type="checkbox" disabled><span>Visa can approve admission</span><span class="badge danger">Denied</span></div>
+            </div>
+            <a class="btn btn-primary" href="#create-user" style="width:100%;margin-top:14px">Create employee account</a>
+          </aside>
+        </section>
+
+        <section class="layout" id="role-templates">
+          <article class="panel">
+            <h2>Role templates</h2>
+            <p>Each new user receives one business role. The role automatically sets navigation, data visibility, and blocked actions.</p>
+            <div class="grid" style="grid-template-columns:repeat(2,1fr);margin-top:12px">
+              <div class="role-card"><strong>Consultant</strong><p>Can browse catalog, create files, upload student documents, and view own assigned files only.</p><span class="badge info">No payments or commissions</span></div>
+              <div class="role-card"><strong>Accounts</strong><p>Can record payments, confirm deposits, calculate dues, and view limited revenue reports.</p><span class="badge info">No document content</span></div>
+              <div class="role-card"><strong>Admission</strong><p>Can review admission documents, request corrections, submit applications, and approve to visa.</p><span class="badge info">No visa outcome or commission</span></div>
+              <div class="role-card"><strong>Visa</strong><p>Can review visa documents, track visa payment clearance, record submission, outcome, and completion.</p><span class="badge info">No admission approval</span></div>
+            </div>
+          </article>
+          <aside class="panel" id="audit-log">
+            <h2>Access audit</h2>
+            <div class="audit" style="margin-top:12px">
+              <div class="audit-row"><p>Owner changed Sabbir Hossain role from Consultant to Admission.</p><span class="badge gold">Owner action</span></div>
+              <div class="audit-row"><p>Accounts attempted to open admission document content for MY-2026-0148.</p><span class="badge danger">Blocked</span></div>
+              <div class="audit-row"><p>Former Staff account suspended; assigned files moved to Nusrat.</p><span class="badge warning">Reassigned</span></div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <section class="modal" id="create-user" aria-label="Create staff user modal">
+    <div class="dialog">
+      <div class="dialog-head"><div><h2>Create staff user</h2><p>Owner creates the login account, assigns one role, and sets the default data scope.</p></div><a class="btn" href="#">Close</a></div>
+      <form class="dialog-grid">
+        <label class="field"><span class="label">Full name</span><input class="input" value="Sabbir Hossain"></label>
+        <label class="field"><span class="label">Work email</span><input class="input" type="email" value="sabbir@agency.local"></label>
+        <label class="field"><span class="label">Phone</span><input class="input" value="+880 1712 000 018"></label>
+        <label class="field"><span class="label">Department</span><select class="select"><option>Admission</option><option>Consultant / Counselling</option><option>Accounts</option><option>Visa</option></select></label>
+        <label class="field"><span class="label">Business role</span><select class="select"><option>Admission Department User</option><option>Consultant / Counsellor</option><option>Accounts Department User</option><option>Visa Department User</option></select></label>
+        <label class="field"><span class="label">Default data scope</span><select class="select"><option>Admission-stage files only</option><option>Own assigned files only</option><option>Payment records and dues</option><option>Visa-stage files only</option></select></label>
+        <label class="field"><span class="label">Temporary password</span><input class="input" value="Adm-Temp-2026"></label>
+        <label class="field"><span class="label">Account status</span><select class="select"><option>Invite and require password reset</option><option>Create active account</option><option>Create inactive account</option></select></label>
+        <div class="permission full">
+          <strong>Permission preview</strong>
+          <p>Allowed: admission documents, academic profile, application submission, offer letter upload, admission approval after payment/doc gates.</p>
+          <p>Denied: user management, deposit confirmation, visa outcome, full financial reports, university commission data.</p>
+        </div>
+        <label class="field full"><span class="label">Owner note</span><textarea rows="3">New admission staff member for Malaysia application queue.</textarea></label>
+        <div class="full" style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap"><a class="btn" href="#">Cancel</a><a class="btn btn-primary" href="#audit-log">Create user and log owner action</a></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="modal" id="assign-consultant" aria-label="Assign consultant files modal">
+    <div class="dialog">
+      <div class="dialog-head"><div><h2>Assign or transfer consultant files</h2><p>Consultants only see files assigned to them. Transfers should preserve activity history.</p></div><a class="btn" href="#">Close</a></div>
+      <form class="dialog-grid">
+        <label class="field"><span class="label">Consultant</span><select class="select"><option>Nusrat Jahan</option><option>Arif Rahman</option></select></label>
+        <label class="field"><span class="label">Transfer from</span><select class="select"><option>Former Staff</option><option>Unassigned</option></select></label>
+        <label class="field full"><span class="label">Files to assign</span><select class="select" multiple size="4"><option>MY-2026-0148 - Farhana Akter</option><option>MY-2026-0152 - Rafiul Islam</option><option>MY-2026-0161 - Tanvir Ahmed</option></select></label>
+        <label class="field full"><span class="label">Reason</span><textarea rows="3">Former staff suspended; active student follow-up moved to Nusrat.</textarea></label>
+        <div class="full" style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap"><a class="btn" href="#">Cancel</a><a class="btn btn-primary" href="#audit-log">Save assignment</a></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="modal" id="deactivate-user" aria-label="Deactivate staff user modal">
+    <div class="dialog">
+      <div class="dialog-head"><div><h2>Suspend staff access</h2><p>Suspension removes login access but keeps documents, payment confirmations, approvals, and activity history intact.</p></div><a class="btn" href="#">Close</a></div>
+      <form class="dialog-grid">
+        <label class="field"><span class="label">User</span><select class="select"><option>Arif Rahman - Consultant</option><option>Former Staff - Consultant</option></select></label>
+        <label class="field"><span class="label">New status</span><select class="select"><option>Suspended</option><option>Inactive</option></select></label>
+        <label class="field"><span class="label">Reassign open files to</span><select class="select"><option>Nusrat Jahan</option><option>Owner review queue</option></select></label>
+        <label class="field"><span class="label">Effective date</span><input class="input" type="date" value="2026-06-03"></label>
+        <div class="blocked full"><strong>Business warning</strong><p>Do not delete staff users because prior file creation, document upload, payment, admission, and visa activity must remain auditable.</p></div>
+        <label class="field full"><span class="label">Owner reason</span><textarea rows="3">Temporary suspension. Reassign active files before blocking login.</textarea></label>
+        <div class="full" style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap"><a class="btn" href="#">Cancel</a><a class="btn btn-danger" href="#audit-log">Suspend access</a></div>
+      </form>
+    </div>
+  </section>
+
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid #dce4e1;border-radius:8px;background:#ffffff;box-shadow:0 8px 24px rgba(16,35,63,.08);font-family:Manrope,Helvetica,sans-serif;">
+    <a href="14-notifications-access-exceptions.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">&larr; Previous: Notifications And Exceptions</a>
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #0f5f4a;color:#fff;text-decoration:none;font-weight:800;background:#0f5f4a;">Flow Index</a>
+    <a href="17-notification-task-center.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">Next: Notification Task Center &rarr;</a>
+  </nav>
+  <!-- COMPONENT TREE: OwnerShell -> StaffMetrics -> StaffAccountTable -> PermissionGuardrails -> RoleTemplateCards -> AccessAudit -> CreateUserModal -> AssignConsultantModal -> DeactivateUserModal. -->
+</body>
+</html>

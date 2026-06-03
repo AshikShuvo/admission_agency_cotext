@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Dark Mode Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#4ed0a5;--primary-700:#1e9d79;--primary-50:#12382f;--navy:#dce8ff;--navy-700:#08111f;--accent:#f2bf5c;--bg:#08110f;--surface:#111c19;--surface-2:#162622;--surface-3:#1d302b;--border:#2c423c;--text:#eaf3ef;--muted:#a2b7b0;--faint:#748983;--success:#65d99d;--success-bg:#123426;--warning:#ffd073;--warning-bg:#3a2c0d;--danger:#ff8a8a;--danger-bg:#3a1717;--info:#93b8ff;--info-bg:#14294d;--hold:#b9adff;--hold-bg:#221d49;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--shadow:0 16px 40px rgba(0,0,0,.32);--focus:0 0 0 3px rgba(78,208,165,.28);--sidebar:248px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:14px;line-height:1.48}h1,h2,h3{font-family:var(--font-display);line-height:1.12;margin:0;color:var(--navy)}p{margin:0;color:var(--muted)}a{color:inherit}.app{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}.side{background:#07101d;color:#fff;padding:20px;border-right:1px solid #17243a}.logo{display:block;font-weight:800;margin-bottom:22px;color:#fff;text-decoration:none}.nav{display:grid;gap:6px}.nav a{color:#cbd7e8;text-decoration:none;padding:10px 12px;border-radius:8px}.nav a.active,.nav a:hover{background:rgba(78,208,165,.16);color:#fff}.top{height:60px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 24px}.content{padding:24px}.head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--border);background:var(--surface-2);color:var(--text);font-weight:800;text-decoration:none}.btn-primary{background:var(--primary-700);border-color:var(--primary-700);color:#05100d}.btn:focus-visible,.input:focus,.select:focus{outline:none;box-shadow:var(--focus);border-color:var(--primary)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:var(--shadow)}.metric strong{display:block;font-size:25px;color:var(--text);margin-top:4px}.layout{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:14px}.badge{display:inline-flex;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.success{background:var(--success-bg);color:var(--success)}.warning{background:var(--warning-bg);color:var(--warning)}.danger{background:var(--danger-bg);color:var(--danger)}.info{background:var(--info-bg);color:var(--info)}.hold{background:var(--hold-bg);color:var(--hold)}.gold{background:#3b2d10;color:var(--accent)}.table{width:100%;border-collapse:collapse}.table th{font-size:11px;text-transform:uppercase;color:var(--muted);text-align:left;background:var(--surface-2)}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}.gate{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--border);border-radius:8px;margin-top:10px;background:var(--surface-2)}.dot{width:34px;height:34px;border-radius:999px;background:var(--primary-50);display:grid;place-items:center;color:var(--primary);font-weight:800}.form{display:grid;gap:10px}.field{display:grid;gap:5px}.label{font-size:11px;text-transform:uppercase;font-weight:800;color:var(--muted)}.input,.select{min-height:38px;border:1px solid var(--border);border-radius:8px;padding:8px 10px;background:#0c1714;color:var(--text);width:100%}.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.swatch{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface-2)}.swatch div{height:42px}.swatch span{display:block;padding:8px 10px;color:var(--muted);font-size:12px}.prototype-flow-nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);box-shadow:var(--shadow);font-family:var(--font-body)}@media(max-width:900px){.app,.grid,.layout,.swatches{grid-template-columns:1fr}.content{padding:16px}.head{display:block}.top{padding:0 16px}.gate{grid-template-columns:34px 1fr}.gate .badge{grid-column:2}}
+  </style>
+</head>
+<body>
+  <!-- SCREEN: route=/design/dark-mode; user=design reviewer; purpose=dark-mode reference for the admissions operations UI; components=dark app shell, metrics, table, stage gates, forms, badges, swatches; states=success, warning, danger, hold, owner-only commission; responsive=single-column mobile. -->
+  <div class="app">
+    <aside class="side">
+      <a class="logo" href="index.html">ADMISSIONS OS</a>
+      <nav class="nav">
+        <a href="00-design-system.html">Light system</a>
+        <a class="active" href="15-dark-mode-reference.html">Dark reference</a>
+        <a href="02-owner-dashboard.html">Owner dashboard</a>
+        <a href="08-student-file-detail.html">File detail</a>
+        <a href="13-reports-and-dashboards.html">Reports</a>
+        <a href="16-staff-user-management.html">Users</a>
+      </nav>
+    </aside>
+    <div>
+      <header class="top"><strong>Dark mode reference</strong><span>Staff review mode - not the default Phase 1 theme</span></header>
+      <main class="content">
+        <header class="head">
+          <div>
+            <h1>Dark mode reference</h1>
+            <p>Use this as the dark token and component reference if the product later supports a dark staff workspace.</p>
+          </div>
+          <a class="btn btn-primary" href="00-design-system.html">Compare light mode</a>
+        </header>
+
+        <section class="panel">
+          <h2>Dark Tokens</h2>
+          <p>Dark mode keeps navy as the authority color, but shifts operational green into a brighter accessible action color.</p>
+          <div class="swatches">
+            <article class="swatch"><div style="background:#08110f"></div><span>Background #08110f</span></article>
+            <article class="swatch"><div style="background:#111c19"></div><span>Surface #111c19</span></article>
+            <article class="swatch"><div style="background:#4ed0a5"></div><span>Primary #4ed0a5</span></article>
+            <article class="swatch"><div style="background:#f2bf5c"></div><span>Commission #f2bf5c</span></article>
+          </div>
+        </section>
+
+        <section class="grid" aria-label="Dark mode metrics">
+          <article class="panel metric"><p>Open files</p><strong>128</strong><p>Admission and visa workload remains scan-friendly.</p></article>
+          <article class="panel metric"><p>Outstanding dues</p><strong>BDT 9.4L</strong><p><span class="badge warning">Attention</span></p></article>
+          <article class="panel metric"><p>Completed files</p><strong>21</strong><p><span class="badge success">Eligible</span></p></article>
+          <article class="panel metric"><p>Commission</p><strong>BDT 6.2L</strong><p><span class="badge gold">Owner-only</span></p></article>
+        </section>
+
+        <section class="layout">
+          <article class="panel">
+            <h2>Dark Queue Table</h2>
+            <table class="table">
+              <thead><tr><th>File</th><th>Student</th><th>Stage</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>MY-2026-0148</td><td>Farhana Akter</td><td>Admission</td><td><span class="badge warning">Correction requested</span></td><td><a class="btn" href="08-student-file-detail.html">Open</a></td></tr>
+                <tr><td>MY-2026-0152</td><td>Rafiul Islam</td><td>Visa</td><td><span class="badge success">Ready to submit</span></td><td><a class="btn btn-primary" href="11-visa-workbench.html">Review</a></td></tr>
+                <tr><td>MY-2026-0119</td><td>Mahdi Hasan</td><td>Exception</td><td><span class="badge danger">Visa rejected</span></td><td><a class="btn" href="14-notifications-access-exceptions.html">Review</a></td></tr>
+              </tbody>
+            </table>
+          </article>
+          <aside class="panel">
+            <h2>Dark Form Controls</h2>
+            <div class="form" style="margin-top:12px">
+              <label class="field"><span class="label">Stage</span><select class="select"><option>Admission</option><option>Visa</option></select></label>
+              <label class="field"><span class="label">Amount</span><input class="input" value="BDT 85,000"></label>
+              <label class="field"><span class="label">Reference</span><input class="input" value="BANK-0603-205"></label>
+              <a class="btn btn-primary" href="09-payment-deposit-workbench.html">Confirm deposit</a>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel" style="margin-top:14px">
+          <h2>Dark Stage Gates</h2>
+          <div class="gate"><span class="dot">1</span><div><strong>File opening payment</strong><p>Accounts confirmed the initial payment gate.</p></div><span class="badge success">Cleared</span></div>
+          <div class="gate"><span class="dot">2</span><div><strong>Admission processing</strong><p>Document correction is still pending from the consultant.</p></div><span class="badge warning">Blocked</span></div>
+          <div class="gate"><span class="dot">3</span><div><strong>Visa outcome</strong><p>Rejection states must remain high contrast and text-labelled.</p></div><span class="badge danger">Rejected</span></div>
+          <div class="gate"><span class="dot">4</span><div><strong>On hold or cancelled</strong><p>Hold states should be visibly different from warnings and errors.</p></div><span class="badge hold">On hold</span></div>
+        </section>
+
+        <section class="panel" style="margin-top:14px">
+          <h2>Accessibility Notes</h2>
+          <p>Dark mode must keep text contrast high, avoid pure black surfaces, preserve visible focus rings, and use text-labelled statuses because color alone is not enough for stage gates or exception states.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation">
+    <a class="btn" href="20-locked-file-state.html">Previous: Locked File State</a>
+    <a class="btn btn-primary" href="index.html">Flow Index</a>
+    <a class="btn" href="index.html">Next: Flow Index</a>
+  </nav>
+  <!-- COMPONENT TREE: DarkReferenceShell -> DarkTokenSwatches -> DarkMetrics -> DarkQueueTable -> DarkFormControls -> DarkStageGates -> AccessibilityNotes. -->
+</body>
+</html>

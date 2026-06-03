@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>:root{--primary:#0f5f4a;--primary-700:#0a4638;--primary-50:#e8f5f0;--navy:#10233f;--navy-700:#0a1629;--accent:#c8922e;--bg:#f6f8f7;--surface:#fff;--surface-2:#eef3f1;--border:#dce4e1;--text:#15211d;--muted:#64736e;--success:#138a55;--success-bg:#e5f6ee;--warning:#b86b00;--warning-bg:#fff3d8;--danger:#c93232;--danger-bg:#fde8e8;--info:#225bb8;--info-bg:#e9f0ff;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--r8:8px;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22)}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--font-body);color:var(--text);font-size:14px}h1,h2{font-family:var(--font-display);color:var(--navy);margin:0;line-height:1.12}p{margin:0;color:var(--muted)}.auth{min-height:100vh;display:grid;grid-template-columns:1fr 460px}.brand{background:var(--navy);color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:space-between}.brand h1{font-size:42px;color:#fff;max-width:580px}.brand p{color:#d8e2df;max-width:560px}.mark{font-weight:800;letter-spacing:.04em}.flow{display:grid;gap:12px;margin-top:36px}.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}.dot{width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-weight:800;color:#fff}.form-wrap{display:grid;place-items:center;padding:32px}.card{width:min(100%,370px);background:#fff;border:1px solid var(--border);border-radius:8px;padding:28px;box-shadow:var(--shadow)}.field{display:grid;gap:6px;margin-top:16px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.02em;font-weight:800;color:var(--muted)}.input{min-height:40px;border:1px solid var(--border);border-radius:8px;padding:8px 10px}.input:focus,.btn:focus-visible,.badge:focus-visible{outline:none;box-shadow:var(--focus);border-color:var(--primary)}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;width:100%;min-height:42px;border:0;border-radius:8px;background:var(--primary);color:#fff;font-weight:800;margin-top:20px;cursor:pointer}.roles{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{border-radius:999px;padding:5px 9px;background:var(--primary-50);color:var(--primary);font-size:12px;font-weight:800;text-decoration:none}@media(max-width:820px){.auth{grid-template-columns:1fr}.brand{min-height:300px;padding:28px}.brand h1{font-size:32px}}</style>
+</head>
+<body>
+  <!-- SCREEN: route=/login; user=all staff; purpose=authenticate and select role-specific workspace; components=auth split, role badges, login form; states=default, invalid credentials, disabled submit; responsive=brand panel stacks above form on mobile. -->
+  <main class="auth">
+    <section class="brand" aria-label="Product context">
+      <div class="mark">ADMISSIONS OS</div>
+      <div>
+        <h1>Run counselling, payments, admission, and visa work from one controlled file lifecycle.</h1>
+        <p>Role-based access keeps owner reporting, accounts clearance, admission documents, visa outcomes, and consultant tasks separated.</p>
+        <div class="flow">
+          <div class="step"><span class="dot">1</span><p>Catalog and package setup before counselling starts.</p></div>
+          <div class="step"><span class="dot">2</span><p>Payment gates before admission and visa stage approval.</p></div>
+          <div class="step"><span class="dot">3</span><p>Completion unlocks owner-only commission tracking.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="form-wrap" aria-labelledby="login-title">
+      <form class="card">
+        <h2 id="login-title">Sign in</h2>
+        <p>Use your agency staff account.</p>
+        <label class="field"><span class="label">Email</span><input class="input" type="email" value="owner@agency.local"></label>
+        <label class="field"><span class="label">Password</span><input class="input" type="password" value="password"></label>
+        <a class="btn" href="02-owner-dashboard.html">Open owner dashboard</a>
+        <div class="roles" aria-label="Supported roles"><a class="badge" href="02-owner-dashboard.html">Owner</a><a class="badge" href="03-consultant-dashboard.html">Consultant</a><a class="badge" href="04-accounts-dashboard.html">Accounts</a><a class="badge" href="10-admission-workbench.html">Admission</a><a class="badge" href="11-visa-workbench.html">Visa</a></div>
+      </form>
+    </section>
+  </main>
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid #dce4e1;border-radius:8px;background:#ffffff;box-shadow:0 8px 24px rgba(16,35,63,.08);font-family:Manrope,Helvetica,sans-serif;">
+    <a href="00-design-system.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">&larr; Previous: Design System</a>
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #0f5f4a;color:#fff;text-decoration:none;font-weight:800;background:#0f5f4a;">Flow Index</a>
+    <a href="02-owner-dashboard.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">Next: Owner Dashboard &rarr;</a>
+  </nav>
+  <!-- COMPONENT TREE: AuthLayout -> BrandPanel -> LifecycleSteps; LoginForm -> Fields -> PrimaryButton -> RoleBadges. -->
+</body>
+</html>

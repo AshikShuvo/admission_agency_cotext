@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Clickable Prototype Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0f5f4a;--primary-50:#e8f5f0;--navy:#10233f;--bg:#f6f8f7;--surface:#fff;--border:#dce4e1;--text:#15211d;--muted:#64736e;--warning:#b86b00;--warning-bg:#fff3d8;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:14px;line-height:1.5}h1,h2,h3{font-family:var(--font-display);color:var(--navy);line-height:1.12;margin:0}p{margin:0;color:var(--muted)}a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:32px 20px 56px}.hero{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:20px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 14px;border-radius:8px;border:1px solid var(--border);text-decoration:none;font-weight:800;background:#fff}.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn:focus-visible,.card:focus-visible{outline:none;box-shadow:var(--focus)}.panel{background:#fff;border:1px solid var(--border);border-radius:8px;padding:18px;box-shadow:var(--shadow);margin-bottom:16px}.flow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;text-decoration:none;border:1px solid var(--border);border-radius:8px;background:#fff;padding:14px}.card:hover{border-color:var(--primary);box-shadow:var(--shadow)}.num{width:42px;height:42px;border-radius:999px;background:var(--primary-50);color:var(--primary);font-weight:800;display:grid;place-items:center}.tag{border-radius:999px;background:var(--warning-bg);color:var(--warning);font-size:12px;font-weight:800;padding:4px 8px}.quick{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}@media(max-width:780px){.hero{display:block}.flow{grid-template-columns:1fr}.card{grid-template-columns:36px 1fr}.tag{grid-column:2}.wrap{padding:22px 14px 42px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <p>Admissions agency Phase 1</p>
+        <h1>Clickable UI Prototype Flow</h1>
+        <p>Use this page as the menu. Each screen also has Previous, Flow Index, and Next links at the bottom.</p>
+      </div>
+      <a class="btn btn-primary" href="01-login.html">Start prototype</a>
+    </header>
+
+    <section class="panel">
+      <h2>Business Flow Screens</h2>
+      <div class="flow" style="margin-top:14px">
+        <a class="card" href="00-design-system.html"><span class="num">00</span><span><strong>Design system</strong><p>Tokens, components, and states.</p></span><span class="tag">Reference</span></a>
+        <a class="card" href="01-login.html"><span class="num">01</span><span><strong>Login</strong><p>Staff entry and role framing.</p></span><span class="tag">Start</span></a>
+        <a class="card" href="02-owner-dashboard.html"><span class="num">02</span><span><strong>Owner dashboard</strong><p>Business-wide visibility.</p></span><span class="tag">Owner</span></a>
+        <a class="card" href="03-consultant-dashboard.html"><span class="num">03</span><span><strong>Consultant dashboard</strong><p>Own files and follow-up.</p></span><span class="tag">Consultant</span></a>
+        <a class="card" href="04-accounts-dashboard.html"><span class="num">04</span><span><strong>Accounts dashboard</strong><p>Payments and dues.</p></span><span class="tag">Accounts</span></a>
+        <a class="card" href="05-catalog-package-management.html"><span class="num">05</span><span><strong>Catalog and packages</strong><p>Owner setup before counselling.</p></span><span class="tag">Setup</span></a>
+        <a class="card" href="06-counselling-program-selection.html"><span class="num">06</span><span><strong>Counselling selection</strong><p>Program search and package review.</p></span><span class="tag">Flow</span></a>
+        <a class="card" href="07-file-opening.html"><span class="num">07</span><span><strong>File opening</strong><p>Create file and payment gate.</p></span><span class="tag">Flow</span></a>
+        <a class="card" href="08-student-file-detail.html"><span class="num">08</span><span><strong>Student file detail</strong><p>Central lifecycle workspace.</p></span><span class="tag">Detail</span></a>
+        <a class="card" href="09-payment-deposit-workbench.html"><span class="num">09</span><span><strong>Payment workbench</strong><p>Deposit confirmation and dues.</p></span><span class="tag">Gate</span></a>
+        <a class="card" href="10-admission-workbench.html"><span class="num">10</span><span><strong>Admission workbench</strong><p>Documents, application, approval.</p></span><span class="tag">Stage</span></a>
+        <a class="card" href="11-visa-workbench.html"><span class="num">11</span><span><strong>Visa workbench</strong><p>Visa submission and outcome.</p></span><span class="tag">Stage</span></a>
+        <a class="card" href="12-commission-tracking.html"><span class="num">12</span><span><strong>Commission tracking</strong><p>Owner-only completed-file revenue.</p></span><span class="tag">Owner</span></a>
+        <a class="card" href="13-reports-and-dashboards.html"><span class="num">13</span><span><strong>Reports</strong><p>Role-scoped reporting.</p></span><span class="tag">Report</span></a>
+        <a class="card" href="14-notifications-access-exceptions.html"><span class="num">14</span><span><strong>Notifications and exceptions</strong><p>Access, alerts, rejected, on hold, cancelled.</p></span><span class="tag">Control</span></a>
+        <a class="card" href="16-staff-user-management.html"><span class="num">16</span><span><strong>Staff and access management</strong><p>Owner creates employees, assigns roles, and audits access.</p></span><span class="tag">Owner</span></a>
+        <a class="card" href="17-notification-task-center.html"><span class="num">17</span><span><strong>Notification task center</strong><p>Unread/read tasks, SLA placeholders, and Phase 2 channels.</p></span><span class="tag">Task</span></a>
+        <a class="card" href="18-exception-closure-workbench.html"><span class="num">18</span><span><strong>Exception closure</strong><p>Hold, cancel, reapply, close, and owner authorization.</p></span><span class="tag">Exception</span></a>
+        <a class="card" href="19-business-decisions-open-questions.html"><span class="num">19</span><span><strong>Business decisions</strong><p>Open questions OQ-01 to OQ-15 for sign-off.</p></span><span class="tag">Review</span></a>
+        <a class="card" href="20-locked-file-state.html"><span class="num">20</span><span><strong>Locked file state</strong><p>Completed/cancelled immutability and owner correction.</p></span><span class="tag">Lock</span></a>
+        <a class="card" href="15-dark-mode-reference.html"><span class="num">15</span><span><strong>Dark mode reference</strong><p>Dark tokens, shell, tables, forms, and stage gates.</p></span><span class="tag">Reference</span></a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Recommended Review Path</h2>
+      <p>Start at login, review role dashboards, then follow the lifecycle: catalog setup, counselling, file opening, payment gate, admission, visa, commission, reports, and exception handling.</p>
+      <div class="quick">
+        <a class="btn btn-primary" href="01-login.html">Start at login</a>
+        <a class="btn" href="05-catalog-package-management.html">Jump to business flow</a>
+        <a class="btn" href="DESIGN-HANDOFF.md">Read handoff</a>
+        <a class="btn" href="VISUALIZATION-COVERAGE-AUDIT.md">Coverage audit</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

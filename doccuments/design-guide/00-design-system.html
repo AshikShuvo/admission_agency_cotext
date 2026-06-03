@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0f5f4a;--primary-700:#0a4638;--primary-50:#e8f5f0;--navy:#10233f;--navy-700:#0a1629;--accent:#c8922e;--bg:#f6f8f7;--surface:#fff;--surface-2:#eef3f1;--border:#dce4e1;--text:#15211d;--muted:#64736e;--faint:#8a9893;--success:#138a55;--success-bg:#e5f6ee;--warning:#b86b00;--warning-bg:#fff3d8;--danger:#c93232;--danger-bg:#fde8e8;--info:#225bb8;--info-bg:#e9f0ff;--hold:#6b5fb8;--hold-bg:#efedff;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--r4:4px;--r8:8px;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22);--sidebar:248px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:14px;line-height:1.45}h1,h2,h3{font-family:var(--font-display);line-height:1.12;margin:0;color:var(--navy)}h1{font-size:34px}h2{font-size:24px}h3{font-size:18px}p{margin:0;color:var(--muted)}button,input,select,textarea{font:inherit}.styleguide{max-width:1180px;margin:0 auto;padding:32px 20px 56px}.hero{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px;box-shadow:var(--shadow);margin-bottom:20px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.swatch{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}.swatch div{height:52px}.swatch span{display:block;padding:10px 12px;font-size:12px;color:var(--muted)}.type-row{display:grid;grid-template-columns:220px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--border)}.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid transparent;font-weight:700;cursor:pointer;background:#fff}.btn:focus-visible,.input:focus,.select:focus{outline:none;box-shadow:var(--focus);border-color:var(--primary)}.btn-primary{background:var(--primary);color:#fff}.btn-secondary{border-color:var(--border);color:var(--navy)}.btn-danger{background:var(--danger);color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}.input,.select,textarea{min-height:38px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:8px 10px;color:var(--text);width:100%}.field{display:grid;gap:5px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.02em;font-weight:800;color:var(--muted)}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800}.success{color:var(--success);background:var(--success-bg)}.warning{color:var(--warning);background:var(--warning-bg)}.danger{color:var(--danger);background:var(--danger-bg)}.info{color:var(--info);background:var(--info-bg)}.hold{color:var(--hold);background:var(--hold-bg)}.table{width:100%;border-collapse:collapse}.table th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.02em;background:var(--surface-2)}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}.gate{display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:center;padding:12px;border:1px solid var(--border);border-radius:8px}.dot{width:32px;height:32px;border-radius:999px;display:grid;place-items:center;background:var(--primary-50);color:var(--primary);font-weight:800}.components{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.empty,.alert{border:1px dashed var(--border);border-radius:8px;padding:16px;background:#fff}.alert{border-style:solid;background:var(--warning-bg)}.skeleton{height:12px;border-radius:999px;background:linear-gradient(90deg,#e8eeee,#f7faf9,#e8eeee);margin:8px 0}@media(max-width:760px){.hero,.type-row{display:block}.grid,.components{grid-template-columns:1fr}h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <main class="styleguide">
+    <header class="hero">
+      <div>
+        <p class="label">Admissions agency operations</p>
+        <h1>Admissions OS Design System</h1>
+        <p>Tokens, components, and role-aware patterns for the Phase 1 internal staff product.</p>
+      </div>
+      <button class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Approved direction</button>
+    </header>
+
+    <section class="panel">
+      <h2>Color Palette</h2>
+      <p>Neutral operational surfaces with green for progress and navy for authority. Gold is reserved for owner-only commission and business-value emphasis.</p>
+      <div class="grid" style="margin-top:16px">
+        <article class="swatch"><div style="background:#0f5f4a"></div><span>Primary Green #0f5f4a</span></article>
+        <article class="swatch"><div style="background:#10233f"></div><span>Navy #10233f</span></article>
+        <article class="swatch"><div style="background:#c8922e"></div><span>Commission Accent #c8922e</span></article>
+        <article class="swatch"><div style="background:#f6f8f7"></div><span>App Background #f6f8f7</span></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Typography</h2>
+      <div class="type-row"><strong>Page title</strong><h1>Student file lifecycle</h1></div>
+      <div class="type-row"><strong>Section title</strong><h2>Payment gates and documents</h2></div>
+      <div class="type-row"><strong>Body</strong><p>Manrope keeps dense tables, checklists, and financial records readable during repeated office use.</p></div>
+    </section>
+
+    <section class="panel">
+      <h2>Core Components</h2>
+      <div class="components" style="margin-top:16px">
+        <div>
+          <p class="label">Buttons</p>
+          <p style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="btn btn-primary">Confirm deposit</button><button class="btn btn-secondary">Request document</button><button class="btn btn-danger">Cancel file</button><button class="btn" disabled>Approve stage</button></p>
+        </div>
+        <div>
+          <p class="label">Fields</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px"><label class="field"><span class="label">Stage</span><select class="select"><option>Admission</option></select></label><label class="field"><span class="label">Amount</span><input class="input" value="BDT 85,000"></label></div>
+        </div>
+        <div>
+          <p class="label">Status badges</p>
+          <p style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><span class="badge success">Cleared</span><span class="badge warning">Pending payment</span><span class="badge info">In admission</span><span class="badge hold">On hold</span><span class="badge danger">Visa rejected</span></p>
+        </div>
+        <div>
+          <p class="label">Role visibility</p>
+          <p style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><span class="badge gold">Owner only</span><span class="badge info">Consultant own files</span><span class="badge danger">Access denied</span></p>
+        </div>
+        <div>
+          <p class="label">Loading and empty states</p>
+          <div class="skeleton"></div><div class="skeleton" style="width:70%"></div><div class="empty" style="margin-top:10px">No visa files match the selected filters.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Stage Gate Pattern</h2>
+      <div style="display:grid;gap:10px;margin-top:16px">
+        <div class="gate"><span class="dot">1</span><div><strong>File opening payment</strong><p>Accounts must confirm the deposit before Admission can begin.</p></div><span class="badge success">Cleared</span></div>
+        <div class="gate"><span class="dot">2</span><div><strong>Admission documents and dues</strong><p>Application submission is blocked until required documents and admission payment are complete.</p></div><span class="badge warning">BDT 18,000 due</span></div>
+        <div class="gate"><span class="dot">3</span><div><strong>Visa outcome</strong><p>Visa approval completes the file; rejection preserves records for reapplication review.</p></div><span class="badge info">Waiting</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Dense Data Table</h2>
+      <table class="table" aria-label="Table component example">
+        <thead><tr><th>File</th><th>Student</th><th>Stage</th><th>Role owner</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>MY-2026-0148</td><td>Farhana Akter</td><td>Admission</td><td>Admission</td><td><span class="badge warning">Correction requested</span></td><td><button class="btn btn-secondary">Open</button></td></tr>
+          <tr><td>MY-2026-0152</td><td>Rafiul Islam</td><td>Visa</td><td>Visa</td><td><span class="badge success">Ready to submit</span></td><td><button class="btn btn-primary">Review</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Accessibility Notes</h2>
+      <p>Statuses use text and color, controls keep visible focus rings, tables keep headers, and icon-only controls require accessible labels in the implementation handoff.</p>
+    </section>
+  </main>
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid #dce4e1;border-radius:8px;background:#ffffff;box-shadow:0 8px 24px rgba(16,35,63,.08);font-family:Manrope,Helvetica,sans-serif;">
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">&larr; Previous: Flow Index</a>
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #0f5f4a;color:#fff;text-decoration:none;font-weight:800;background:#0f5f4a;">Flow Index</a>
+    <a href="01-login.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">Next: Login &rarr;</a>
+  </nav>
+</body>
+</html>

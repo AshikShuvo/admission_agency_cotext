@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions OS - Owner Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>:root{--primary:#0f5f4a;--primary-700:#0a4638;--primary-50:#e8f5f0;--navy:#10233f;--navy-700:#0a1629;--accent:#c8922e;--bg:#f6f8f7;--surface:#fff;--surface-2:#eef3f1;--border:#dce4e1;--text:#15211d;--muted:#64736e;--success:#138a55;--success-bg:#e5f6ee;--warning:#b86b00;--warning-bg:#fff3d8;--danger:#c93232;--danger-bg:#fde8e8;--info:#225bb8;--info-bg:#e9f0ff;--hold:#6b5fb8;--hold-bg:#efedff;--font-display:"Source Serif 4",Georgia,serif;--font-body:Manrope,Helvetica,sans-serif;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--r8:8px;--shadow:0 8px 24px rgba(16,35,63,.08);--focus:0 0 0 3px rgba(15,95,74,.22);--sidebar:248px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--font-body);font-size:14px;color:var(--text)}h1,h2,h3{font-family:var(--font-display);color:var(--navy);margin:0;line-height:1.12}p{margin:0;color:var(--muted)}.app{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}.side{background:var(--navy);color:#fff;padding:20px;position:sticky;top:0;height:100vh}.logo{display:block;font-weight:800;margin-bottom:22px;color:#fff;text-decoration:none}.nav{display:grid;gap:6px}.nav a{color:#dbe5e1;text-decoration:none;padding:10px 12px;border-radius:8px}.nav a.active,.nav a:hover{background:rgba(255,255,255,.12);color:#fff}.main{min-width:0}.top{height:60px;background:#fff;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 24px}.content{padding:24px}.head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.btn{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--navy);font-weight:800}.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn:focus-visible{outline:none;box-shadow:var(--focus)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.panel{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:var(--shadow)}.metric strong{font-size:25px;color:var(--navy)}.split{display:grid;grid-template-columns:1.4fr .9fr;gap:14px;margin-top:14px}.table{width:100%;border-collapse:collapse}.table th{font-size:11px;color:var(--muted);text-transform:uppercase;text-align:left;background:var(--surface-2)}.table th,.table td{padding:10px;border-bottom:1px solid var(--border)}.badge{display:inline-flex;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.success{background:var(--success-bg);color:var(--success)}.warning{background:var(--warning-bg);color:var(--warning)}.danger{background:var(--danger-bg);color:var(--danger)}.info{background:var(--info-bg);color:var(--info)}.gold{background:#FFF3D6;color:#8A5A00}.list{display:grid;gap:10px}.item{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border);padding-bottom:10px}@media(max-width:860px){.app{grid-template-columns:1fr}.side{position:static;height:auto}.grid,.split{grid-template-columns:1fr}.head{display:block}.top{padding:0 16px}.content{padding:16px}}</style>
+</head>
+<body>
+  <!-- SCREEN: route=/owner/dashboard; user=Owner; purpose=company-wide operational, financial, commission, and staff visibility; components=app shell, metrics, report table, activity list; states=normal, high due, owner-only commission; responsive=sidebar stacks above content. -->
+  <div class="app">
+    <aside class="side"><a class="logo" href="index.html">ADMISSIONS OS</a><nav class="nav"><a class="active" href="02-owner-dashboard.html">Dashboard</a><a href="08-student-file-detail.html">Files</a><a href="05-catalog-package-management.html">Catalog</a><a href="09-payment-deposit-workbench.html">Payments</a><a href="12-commission-tracking.html">Commissions</a><a href="13-reports-and-dashboards.html">Reports</a><a href="16-staff-user-management.html">Users</a></nav></aside>
+    <div class="main">
+      <header class="top"><strong>Owner workspace</strong><span>Bangladesh HQ - June 2026</span></header>
+      <main class="content">
+        <header class="head"><div><h1>Owner dashboard</h1><p>Full business visibility across files, revenue, dues, staff, universities, and commission.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="16-staff-user-management.html">Manage users</a><a class="btn btn-primary" href="13-reports-and-dashboards.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>Export report</a></div></header>
+        <section class="grid" aria-label="Owner metrics">
+          <article class="panel metric"><p>Open files</p><strong>128</strong><p>24 in admission, 19 in visa</p></article>
+          <article class="panel metric"><p>Month revenue</p><strong>BDT 42.8L</strong><p>Student charges confirmed</p></article>
+          <article class="panel metric"><p>Outstanding dues</p><strong>BDT 9.4L</strong><p>Admission dues are highest</p></article>
+          <article class="panel metric"><p>Commission received</p><strong>BDT 6.2L</strong><p class="badge gold">Owner-only</p></article>
+        </section>
+        <section class="split">
+          <article class="panel">
+            <h2>Files needing decision</h2>
+            <table class="table"><thead><tr><th>File</th><th>Student</th><th>Consultant</th><th>Status</th><th>Risk</th></tr></thead><tbody>
+              <tr><td>MY-2026-0148</td><td>Farhana Akter</td><td>Nusrat</td><td><span class="badge warning">On hold</span></td><td>Passport delayed</td></tr>
+              <tr><td>MY-2026-0119</td><td>Mahdi Hasan</td><td>Arif</td><td><span class="badge danger">Visa rejected</span></td><td>Reapply review</td></tr>
+              <tr><td>MY-2026-0102</td><td>Jannatul Mira</td><td>Nusrat</td><td><span class="badge success">Completed</span></td><td>Commission expected</td></tr>
+            </tbody></table>
+          </article>
+          <aside class="panel">
+            <h2>Recent activity</h2>
+            <div class="list" style="margin-top:12px">
+              <div class="item"><p>Accounts confirmed BDT 120,000 for MY-2026-0152.</p><span class="badge success">Cleared</span></div>
+              <div class="item"><p>Admission requested transcript correction for MY-2026-0148.</p><span class="badge warning">Task</span></div>
+              <div class="item"><p>MMU commission entered for completed file.</p><span class="badge gold">Private</span></div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+  </div>
+  <nav class="prototype-flow-nav" aria-label="Prototype flow navigation" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:24px;max-width:1120px;padding:12px;border:1px solid #dce4e1;border-radius:8px;background:#ffffff;box-shadow:0 8px 24px rgba(16,35,63,.08);font-family:Manrope,Helvetica,sans-serif;">
+    <a href="01-login.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">&larr; Previous: Login</a>
+    <a href="index.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #0f5f4a;color:#fff;text-decoration:none;font-weight:800;background:#0f5f4a;">Flow Index</a>
+    <a href="03-consultant-dashboard.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #dce4e1;color:#10233f;text-decoration:none;font-weight:800;background:#fff;">Next: Consultant Dashboard &rarr;</a>
+  </nav>
+  <!-- COMPONENT TREE: AppShell -> SidebarNav + Topbar + OwnerMetrics + DecisionTable + ActivityFeed. -->
+</body>
+</html>
