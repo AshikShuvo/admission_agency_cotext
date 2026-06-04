@@ -25,6 +25,7 @@ Use this page as the navigator for all architecture documentation.
 | [Users and Roles](../business/users_and_roles.md) | Role responsibilities, restrictions, and permission matrix. |
 | [Phase Goals](../business/phase_goals.md) | Business goals for Phase 1, Phase 2, and Phase 3. |
 | [Business Flows Index](../business/flows/00_business_flows_index.md) | Workflow-level view of the business process. |
+| [Business Requirements](../requirements/index.md) | Module-level EPICs, user stories, frontend tasks, backend tasks, and progress tracker. |
 
 ## Recommended Reading Path
 
@@ -33,8 +34,9 @@ Use this page as the navigator for all architecture documentation.
 3. Read [Module Boundaries](module_boundaries.md) to understand ownership of each business flow.
 4. Read [Data Model](data_model.md), [API Design](api_design.md), and [Access Control](access_control.md) before implementation.
 5. Read [File Storage and Documents](file_storage_and_documents.md) before building uploads or document review.
-6. Read [Testing Strategy](testing_strategy.md) before implementing Phase 1 workflows.
-7. Read [Deployment and Phases](deployment_and_phases.md) before setting up local deployment or planning future hosting.
+6. Read [Business Requirements](../requirements/index.md) before assigning implementation tasks to frontend or backend agents.
+7. Read [Testing Strategy](testing_strategy.md) before implementing Phase 1 workflows.
+8. Read [Deployment and Phases](deployment_and_phases.md) before setting up local deployment or planning future hosting.
 
 ## Locked Architecture Decisions
 

@@ -11,6 +11,7 @@ Use this page as the navigator for all business documentation files under the `b
 | [Users and Roles](users_and_roles.md) | Dedicated role reference describing internal users, external actors, responsibilities, access scope, restrictions, and permission matrix. |
 | [Phase Goals](phase_goals.md) | Business roadmap describing what should be achieved in Phase 1, Phase 2, and Phase 3, including which flows belong in each phase. |
 | [Application Mermaid Diagram](application_mermaid_diagram.md) | Visual map of the full application lifecycle, role workspaces, data relationships, and coverage across all business flows. |
+| [Business Requirements](../requirements/index.md) | Module-by-module EPIC, user story, frontend task, backend task, and completion tracking workspace. |
 
 ## Subfolders
 
@@ -43,4 +44,5 @@ Use this page as the navigator for all business documentation files under the `b
 3. Read [Phase Goals](phase_goals.md) to understand what should be achieved in each delivery phase.
 4. Open [Application Mermaid Diagram](application_mermaid_diagram.md) for a visual overview of the full application.
 5. Open [Flows Index](flows/00_business_flows_index.md) for a workflow-level overview.
-6. Review each flow document independently when designing features, screens, APIs, or database tables.
+6. Open [Business Requirements](../requirements/index.md) to translate flows into EPICs, user stories, frontend tasks, backend tasks, and progress tracking.
+7. Review each flow document independently when designing features, screens, APIs, or database tables.

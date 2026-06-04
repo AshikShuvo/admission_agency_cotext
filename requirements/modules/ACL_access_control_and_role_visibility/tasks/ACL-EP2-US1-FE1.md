@@ -1,0 +1,99 @@
+# ACL-EP2-US1-FE1: Consume scoped API responses without assuming hidden data exists.
+## Detailed Frontend Task Plan
+
+Status: `Not Started`
+Owner: `Unassigned`
+Last updated: `2026-06-04`
+
+## Traceability
+
+| Level | Reference |
+|---|---|
+| Module | `ACL` - Access Control and Role Visibility |
+| EPIC | [ACL-EP2: Data Scope and Sensitive Field Filtering](../epics/ACL-EP2_data_scope_and_sensitive_field_filtering.md) |
+| User Story | [ACL-EP2-US1: Apply Query-Level Data Scope](../stories/ACL-EP2-US1_apply_query_level_data_scope.md) |
+| Task Type | `FE` |
+
+## Business Context
+
+As the system, I want query-level data scopes so that users only receive records they are allowed to see.
+
+This task supports the module goal: Ensure every screen, API, query, and action respects the user's role and data scope. UI hiding is not enough; access must be enforced by backend authorization and query-level filters.
+
+## Source Documents
+
+- [Access Control and Role Visibility Flow](../../../../business/flows/10_access_control_and_role_visibility_flow.md)
+- [Users and Roles](../../../../business/users_and_roles.md)
+- [Access Control Architecture](../../../../architecture/access_control.md)
+
+## Acceptance Criteria Impact
+
+- [ ] Consultant file lists include only assigned files.
+- [ ] Department users see only stage-relevant files.
+- [ ] Owner can filter across all files.
+
+## Business Rules To Preserve
+
+- Backend authorization is mandatory.
+- UI hiding is not enough.
+- Sensitive fields are filtered by role.
+
+## Dependencies To Check First
+
+- Depends on role model from business/users_and_roles.md and applies to all modules.
+
+## Implementation Plan
+
+1. Locate or create the All Workspaces route or workspace section that owns this behavior.
+2. Create typed UI models for the data needed by the story; keep field names aligned with the backend DTO/API contract.
+3. Build the screen, panel, form, table, queue, or state component described by the task with loading, empty, success, and error states.
+4. Apply role-aware behavior using authenticated user role and backend permission response; do not rely on visual hiding for security decisions.
+5. Connect mutation actions to API calls only after backend contract exists; otherwise document the missing contract as a blocker.
+6. Add user-visible validation for required fields, invalid transitions, duplicate warnings, and blocked workflow states mentioned by acceptance criteria.
+7. Add frontend coverage for the happy path and at least one blocked/error path. Prefer Playwright for full role flows and component tests only for risky reusable pieces.
+
+## UI and Contract Expectations
+
+- Frontend workspace: `All Workspaces`.
+- Use Next.js, TypeScript, Tailwind CSS, and React Query patterns when implementation begins.
+- Prefer API-driven permissions and response fields over hardcoded role assumptions.
+- Required states: loading, empty, successful data, validation error, authorization-restricted, and server error.
+- Design reference: `../../../../design-guide/14-notifications-access-exceptions.html`.
+
+## Data, State, and Error Handling
+
+- Identify all required fields from the story acceptance criteria before implementation.
+- Keep IDs stable and use backend-generated identifiers for persisted records.
+- Handle not found, forbidden, validation error, duplicate/conflict, and workflow-blocked responses.
+- Preserve historical records when the business flow says data must not be deleted or overwritten.
+- Do not expose restricted fields in UI state, API responses, logs, or test fixtures.
+
+## Test Plan
+
+- [ ] Add or update automated tests for the normal successful path.
+- [ ] Add or update tests for at least one blocked or invalid path.
+- [ ] Add role/access tests when task touches restricted data or actions.
+- [ ] Confirm test data includes the minimum business objects needed for this story.
+- [ ] Record the test command in the agent handoff note.
+
+## Definition of Done
+
+- [ ] Implementation matches this task plan and the linked story acceptance criteria.
+- [ ] Required UI/API/service behavior is implemented in the correct module boundary.
+- [ ] Authorization and data visibility are enforced where applicable.
+- [ ] Tests are added or an explicit test gap is recorded as a blocker.
+- [ ] This task checkbox is marked complete in the story file and source module summary.
+- [ ] [Progress Tracker](../../../progress_tracker.md) is updated with the completed task count.
+
+## Handoff Note Template
+
+```text
+Module: ACL
+Story: ACL-EP2-US1
+Completed task: ACL-EP2-US1-FE1
+Files changed:
+Tests run:
+Tracker updated:
+Open blockers:
+Next recommended task:
+```
