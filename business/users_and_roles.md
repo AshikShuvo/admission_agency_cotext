@@ -281,3 +281,4 @@ The university is not a direct system user in the current scope. University info
 - [Visa Processing](flows/06_visa_processing_flow.md)
 - [University Commission Tracking](flows/07_university_commission_tracking_flow.md)
 - [Access Control and Role Visibility](flows/10_access_control_and_role_visibility_flow.md)
+- [User Management](flows/12_user_management_flow.md)

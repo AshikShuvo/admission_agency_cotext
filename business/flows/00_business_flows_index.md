@@ -3,7 +3,9 @@
 
 This folder breaks the full business domain into separate workflow documents so each solution flow can be reviewed independently.
 
-Source document: `doccuments/business/business_domain_documentation.md`
+Source document: [Business Domain Documentation](../business_domain_documentation.md)
+
+Visual overview: [Application Mermaid Diagram](../application_mermaid_diagram.md)
 
 ## Flow Files
 
@@ -20,6 +22,7 @@ Source document: `doccuments/business/business_domain_documentation.md`
 | 9 | Notifications and Communication | `09_notifications_and_communication_flow.md` | System |
 | 10 | Access Control and Role Visibility | `10_access_control_and_role_visibility_flow.md` | System, Owner |
 | 11 | Exception and File Closure Handling | `11_exception_and_file_closure_flow.md` | Owner, Relevant Department |
+| 12 | User Management | `12_user_management_flow.md` | Owner |
 
 ## End-to-End Lifecycle
 
@@ -45,6 +48,7 @@ These flows apply across several lifecycle stages:
 
 - Payment and deposit confirmation
 - Access control and role visibility
+- User management
 - Notifications and communication
 - Reporting and dashboards
 - Exception handling, cancellation, hold, and visa rejection

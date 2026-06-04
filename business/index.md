@@ -10,6 +10,7 @@ Use this page as the navigator for all business documentation files under the `b
 | [Business Domain Documentation](business_domain_documentation.md) | Full business-domain reference covering overview, roles, catalog, core processes, financial rules, status model, data entities, permissions, reporting, and open questions. |
 | [Users and Roles](users_and_roles.md) | Dedicated role reference describing internal users, external actors, responsibilities, access scope, restrictions, and permission matrix. |
 | [Phase Goals](phase_goals.md) | Business roadmap describing what should be achieved in Phase 1, Phase 2, and Phase 3, including which flows belong in each phase. |
+| [Application Mermaid Diagram](application_mermaid_diagram.md) | Visual map of the full application lifecycle, role workspaces, data relationships, and coverage across all business flows. |
 
 ## Subfolders
 
@@ -33,11 +34,13 @@ Use this page as the navigator for all business documentation files under the `b
 | 9 | Notifications and Communication | [09_notifications_and_communication_flow.md](flows/09_notifications_and_communication_flow.md) |
 | 10 | Access Control and Role Visibility | [10_access_control_and_role_visibility_flow.md](flows/10_access_control_and_role_visibility_flow.md) |
 | 11 | Exception and File Closure Handling | [11_exception_and_file_closure_flow.md](flows/11_exception_and_file_closure_flow.md) |
+| 12 | User Management | [12_user_management_flow.md](flows/12_user_management_flow.md) |
 
 ## Suggested Reading Path
 
 1. Start with [Business Domain Documentation](business_domain_documentation.md) for the full context.
 2. Read [Users and Roles](users_and_roles.md) to understand who uses the system, what each role is responsible for, and what each role can access.
 3. Read [Phase Goals](phase_goals.md) to understand what should be achieved in each delivery phase.
-4. Open [Flows Index](flows/00_business_flows_index.md) for a workflow-level overview.
-5. Review each flow document independently when designing features, screens, APIs, or database tables.
+4. Open [Application Mermaid Diagram](application_mermaid_diagram.md) for a visual overview of the full application.
+5. Open [Flows Index](flows/00_business_flows_index.md) for a workflow-level overview.
+6. Review each flow document independently when designing features, screens, APIs, or database tables.
