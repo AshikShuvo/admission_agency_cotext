@@ -28,7 +28,7 @@ Do not start a downstream module until its required upstream data and workflow g
 | Order | Module | Folder | Why This Comes Here | Can Start When |
 |---:|---|---|---|---|
 | 1 | Access Control and Role Visibility | [ACL](modules/ACL_access_control_and_role_visibility/index.md) | Every module needs authenticated user context, role checks, protected routes, query scopes, and sensitive-field filtering. | Start immediately. |
-| 2 | User Management | [USR](modules/USR_user_management/index.md) | Owner must create staff users and assign roles before real role-based workflows can be tested. | Minimal ACL role model exists. |
+| 2 | User Management | [USR](modules/USR_user_management/index.md) | Owner must log in, then create staff users and assign roles before real role-based workflows can be tested. | Minimal ACL role model exists and Owner bootstrap login is available. |
 | 3 | Catalog and Packages | [CAT](modules/CAT_catalog_and_packages/index.md) | Counselling and file opening require active countries, universities, programs, and packages. | Owner role and catalog mutation permission exist. |
 | 4 | Counselling and Program Selection | [CNS](modules/CNS_counselling_and_program_selection/index.md) | Consultants need searchable catalog and selected program context before opening files. | CAT active catalog and active package lookup exist. |
 | 5 | File Opening and Student Case | [FIL](modules/FIL_file_opening_and_student_case/index.md) | The student file is the central workflow record for payments, admission, visa, documents, reports, and commissions. | CAT active package exists; CNS selected program context exists or is mocked. |
@@ -48,8 +48,10 @@ Goal: let real internal users log in and operate only inside their role boundary
 
 Implementation order:
 
-1. [ACL](modules/ACL_access_control_and_role_visibility/index.md)
-2. [USR](modules/USR_user_management/index.md)
+1. [ACL role permissions and direct access](modules/ACL_access_control_and_role_visibility/index.md)
+2. [Owner bootstrap login](modules/USR_user_management/stories/USR-EP1-US0_bootstrap_owner_login.md)
+3. [Staff user creation](modules/USR_user_management/stories/USR-EP1-US1_create_staff_user.md)
+4. [Staff update, suspension, and audit](modules/USR_user_management/index.md)
 
 Minimum usable outcome:
 
@@ -58,6 +60,8 @@ Minimum usable outcome:
 - Backend rejects unauthorized API actions.
 - Frontend protects routes by role.
 - Consultant, Accounts, Admission, Visa, and Owner role scopes are testable.
+
+Browser-usable user management depends on real Owner login. Staff creation must not start as a browser workflow until the system can seed an Owner, authenticate that Owner, load `/auth/me` from a real token, and protect authenticated routes.
 
 ### Phase 1B: Pre-File Setup
 
@@ -131,20 +135,20 @@ Minimum usable outcome:
 
 ## What To Start Next
 
-If implementation has not started yet, start here:
+With `ACL-EP1` accepted, start here:
 
-1. [ACL-EP1: Role Permissions](modules/ACL_access_control_and_role_visibility/epics/ACL-EP1_role_permissions.md)
-2. [ACL-EP1-US1: Enforce Role Permissions](modules/ACL_access_control_and_role_visibility/stories/ACL-EP1-US1_enforce_role_permissions.md)
+1. [USR-EP1: Staff Account Lifecycle](modules/USR_user_management/epics/USR-EP1_staff_account_lifecycle.md)
+2. [USR-EP1-US0: Bootstrap Owner Login](modules/USR_user_management/stories/USR-EP1-US0_bootstrap_owner_login.md)
 3. Backend first:
-   - [ACL-EP1-US1-BE1](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-BE1.md)
-   - [ACL-EP1-US1-BE2](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-BE2.md)
-   - [ACL-EP1-US1-BE3](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-BE3.md)
+   - [USR-EP1-US0-BE1](modules/USR_user_management/tasks/USR-EP1-US0-BE1.md)
+   - [USR-EP1-US0-BE2](modules/USR_user_management/tasks/USR-EP1-US0-BE2.md)
+   - [USR-EP1-US0-BE3](modules/USR_user_management/tasks/USR-EP1-US0-BE3.md)
 4. Then frontend:
-   - [ACL-EP1-US1-FE1](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-FE1.md)
-   - [ACL-EP1-US1-FE2](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-FE2.md)
-   - [ACL-EP1-US1-FE3](modules/ACL_access_control_and_role_visibility/tasks/ACL-EP1-US1-FE3.md)
+   - [USR-EP1-US0-FE1](modules/USR_user_management/tasks/USR-EP1-US0-FE1.md)
+   - [USR-EP1-US0-FE2](modules/USR_user_management/tasks/USR-EP1-US0-FE2.md)
+   - [USR-EP1-US0-FE3](modules/USR_user_management/tasks/USR-EP1-US0-FE3.md)
 
-Reason: role permission enforcement is a prerequisite for safe implementation of every other module.
+Reason: staff creation cannot be used or verified through the browser until a real Owner account can authenticate and carry a protected session.
 
 ## Parallel Work Rules
 
@@ -185,4 +189,3 @@ A module is complete only when:
 6. Assign backend tasks first when frontend depends on API/data/permissions.
 7. Assign frontend tasks after backend contract exists or mark the dependency clearly.
 8. Update task, story, EPIC, module folder, and tracker files after work completes.
-

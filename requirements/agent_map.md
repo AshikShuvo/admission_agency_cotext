@@ -64,7 +64,7 @@ When assigning work, route in this order:
 | Notify users and manage follow-up tasks | NOT | [Notifications and Task Follow-up](modules/NOT_notifications_and_task_follow_up/index.md) | Notification list and task center | Notification entity, event routing, read/resolve APIs |
 | Enforce permissions and visibility | ACL | [Access Control and Role Visibility](modules/ACL_access_control_and_role_visibility/index.md) | Protected routes and role-aware UI | Guards, policies, query scopes, response filtering |
 | Hold, cancel, reject, close, and lock files | EXC | [Exception and File Closure](modules/EXC_exception_and_file_closure/index.md) | Exception action panels and locked states | File status transitions and edit restrictions |
-| Manage staff users | USR | [User Management](modules/USR_user_management/index.md) | Staff user management screens | User lifecycle APIs, suspension, audit trail |
+| Bootstrap Owner login and manage staff users | USR | [User Management](modules/USR_user_management/index.md) | Login/session screens and staff user management screens | Auth/session APIs, user lifecycle APIs, suspension, audit trail |
 
 ## Task Selection Rules
 
@@ -91,7 +91,7 @@ Use this priority when choosing the next task:
 | NOT | Business events from FIL, PAY, ADM, VIS, EXC |
 | ACL | User roles, all module data visibility rules |
 | EXC | FIL status model, VIS rejection, COM completion eligibility |
-| USR | ACL role model and audit logging |
+| USR | ACL role model, audit logging, and bootstrap Owner login before staff creation |
 
 ## Frontend Agent Workflow
 

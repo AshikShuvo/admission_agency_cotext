@@ -3,7 +3,7 @@
 
 Status: `Not Started`
 Owner: `Unassigned`
-Last updated: `2026-06-04`
+Last updated: `2026-06-05`
 
 ## Module Context
 
@@ -20,6 +20,7 @@ Deliver this capability area as a coherent business workflow, not as isolated sc
 
 ## Functional Scope
 
+- Owner can log in through a bootstrapped account before staff workflows begin.
 - Owner can create staff users with exactly one primary role.
 - Owner can update staff details, department, role, and active status.
 - Role scope preview is shown before changes are confirmed.
@@ -28,15 +29,17 @@ Deliver this capability area as a coherent business workflow, not as isolated sc
 ## Business Rules To Preserve
 
 - Only Owner manages staff users.
+- Browser-usable staff management depends on a real authenticated Owner session.
 - Each user has one primary role unless explicitly approved.
 - Suspension blocks access without deleting history.
 
 ## Dependencies
 
-- Depends on ACL role model and audit logging.
+- Depends on ACL role model, audit logging, and bootstrap Owner login.
 
 ## User Stories
 
+- [ ] [USR-EP1-US0: Bootstrap Owner Login](../stories/USR-EP1-US0_bootstrap_owner_login.md)
 - [ ] [USR-EP1-US1: Create Staff User](../stories/USR-EP1-US1_create_staff_user.md)
 - [ ] [USR-EP1-US2: Update Staff Details and Role](../stories/USR-EP1-US2_update_staff_details_and_role.md)
 
