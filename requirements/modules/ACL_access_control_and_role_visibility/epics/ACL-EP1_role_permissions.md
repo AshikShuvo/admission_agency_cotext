@@ -1,9 +1,9 @@
 # ACL-EP1: Role Permissions
 ## Detailed EPIC
 
-Status: `Not Started`
-Owner: `Unassigned`
-Last updated: `2026-06-04`
+Status: `In Progress`
+Owner: `Hegel / Lorentz / Gibbs`
+Last updated: `2026-06-05`
 
 ## Module Context
 
@@ -37,7 +37,7 @@ Deliver this capability area as a coherent business workflow, not as isolated sc
 
 ## User Stories
 
-- [ ] [ACL-EP1-US1: Enforce Role Permissions](../stories/ACL-EP1-US1_enforce_role_permissions.md)
+- [x] [ACL-EP1-US1: Enforce Role Permissions](../stories/ACL-EP1-US1_enforce_role_permissions.md)
 - [ ] [ACL-EP1-US2: Block Unauthorized Direct Access](../stories/ACL-EP1-US2_block_unauthorized_direct_access.md)
 
 ## Implementation Expectations

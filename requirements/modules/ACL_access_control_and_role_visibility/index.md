@@ -3,9 +3,9 @@
 
 Module ID: `ACL`
 
-Status: `Not Started`
-Owner: `Unassigned`
-Last updated: `2026-06-04`
+Status: `In Progress`
+Owner: `Hegel / Lorentz / Gibbs`
+Last updated: `2026-06-05`
 
 ## Module Goal
 
@@ -51,19 +51,19 @@ Ensure every screen, API, query, and action respects the user's role and data sc
 
 ## User Story Files
 
-- [ ] [ACL-EP1-US1: Enforce Role Permissions](stories/ACL-EP1-US1_enforce_role_permissions.md)
+- [x] [ACL-EP1-US1: Enforce Role Permissions](stories/ACL-EP1-US1_enforce_role_permissions.md)
 - [ ] [ACL-EP1-US2: Block Unauthorized Direct Access](stories/ACL-EP1-US2_block_unauthorized_direct_access.md)
 - [ ] [ACL-EP2-US1: Apply Query-Level Data Scope](stories/ACL-EP2-US1_apply_query_level_data_scope.md)
 - [ ] [ACL-EP2-US2: Filter Sensitive Fields](stories/ACL-EP2-US2_filter_sensitive_fields.md)
 
 ## Task Implementation Plans
 
-- [ ] [ACL-EP1-US1-FE1](tasks/ACL-EP1-US1-FE1.md): Build role-based navigation configuration for allowed workspaces.
-- [ ] [ACL-EP1-US1-FE2](tasks/ACL-EP1-US1-FE2.md): Add disabled or hidden action states based on backend permission data.
-- [ ] [ACL-EP1-US1-FE3](tasks/ACL-EP1-US1-FE3.md): Add tests for role-specific navigation and blocked actions.
-- [ ] [ACL-EP1-US1-BE1](tasks/ACL-EP1-US1-BE1.md): Implement role permission map for core modules and actions.
-- [ ] [ACL-EP1-US1-BE2](tasks/ACL-EP1-US1-BE2.md): Add NestJS guards or policy checks for protected routes and service actions.
-- [ ] [ACL-EP1-US1-BE3](tasks/ACL-EP1-US1-BE3.md): Add tests for allowed and blocked role actions across key modules.
+- [x] [ACL-EP1-US1-FE1](tasks/ACL-EP1-US1-FE1.md): Build role-based navigation configuration for allowed workspaces.
+- [x] [ACL-EP1-US1-FE2](tasks/ACL-EP1-US1-FE2.md): Add disabled or hidden action states based on backend permission data.
+- [x] [ACL-EP1-US1-FE3](tasks/ACL-EP1-US1-FE3.md): Add tests for role-specific navigation and blocked actions.
+- [x] [ACL-EP1-US1-BE1](tasks/ACL-EP1-US1-BE1.md): Implement role permission map for core modules and actions.
+- [x] [ACL-EP1-US1-BE2](tasks/ACL-EP1-US1-BE2.md): Add NestJS guards or policy checks for protected routes and service actions.
+- [x] [ACL-EP1-US1-BE3](tasks/ACL-EP1-US1-BE3.md): Add tests for allowed and blocked role actions across key modules.
 - [ ] [ACL-EP1-US2-FE1](tasks/ACL-EP1-US2-FE1.md): Add protected route wrapper using current user permission data.
 - [ ] [ACL-EP1-US2-FE2](tasks/ACL-EP1-US2-FE2.md): Build restricted access state for blocked routes.
 - [ ] [ACL-EP1-US2-FE3](tasks/ACL-EP1-US2-FE3.md): Add tests for direct navigation to unauthorized screens.
