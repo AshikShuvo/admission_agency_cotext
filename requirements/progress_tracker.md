@@ -17,9 +17,9 @@ Use this file to track completion across all requirement modules. Update this tr
 |---|---:|---:|---:|
 | Modules | 12 | 0 | 0% |
 | EPICs | 24 | 1 | 4% |
-| User Stories | 48 | 2 | 4% |
-| Frontend Tasks | 144 | 6 | 4% |
-| Backend Tasks | 144 | 6 | 4% |
+| User Stories | 49 | 2 | 4% |
+| Frontend Tasks | 147 | 6 | 4% |
+| Backend Tasks | 147 | 6 | 4% |
 
 ## Module Progress
 
@@ -36,7 +36,7 @@ Use this file to track completion across all requirement modules. Update this tr
 | NOT | Notifications and Task Follow-up | [NOT_notifications_and_task_follow_up](modules/NOT_notifications_and_task_follow_up/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
 | ACL | Access Control and Role Visibility | [ACL_access_control_and_role_visibility](modules/ACL_access_control_and_role_visibility/index.md) | 1/2 | 2/4 | 6/12 | 6/12 | In Progress | None |
 | EXC | Exception and File Closure | [EXC_exception_and_file_closure](modules/EXC_exception_and_file_closure/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
-| USR | User Management | [USR_user_management](modules/USR_user_management/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
+| USR | User Management | [USR_user_management](modules/USR_user_management/index.md) | 0/2 | 0/5 | 0/15 | 0/15 | Not Started | None |
 
 ## Current Blockers
 

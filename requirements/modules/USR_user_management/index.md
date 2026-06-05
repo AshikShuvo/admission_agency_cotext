@@ -5,11 +5,11 @@ Module ID: `USR`
 
 Status: `Not Started`
 Owner: `Unassigned`
-Last updated: `2026-06-04`
+Last updated: `2026-06-05`
 
 ## Module Goal
 
-Allow Owner to create, update, suspend, and audit internal staff accounts so every user has the correct role before accessing files, payments, documents, reports, catalog records, or commissions.
+Allow Owner to log in, then create, update, suspend, and audit internal staff accounts so every user has the correct role before accessing files, payments, documents, reports, catalog records, or commissions.
 
 ## Primary Actors
 
@@ -37,12 +37,13 @@ Allow Owner to create, update, suspend, and audit internal staff accounts so eve
 ## Business Rules
 
 - Only Owner manages staff users.
+- Browser-usable user management requires a real Owner session; staff creation does not start until Owner bootstrap login is accepted.
 - Each user has one primary role unless explicitly approved.
 - Suspension blocks access without deleting history.
 
 ## Dependencies
 
-- Depends on ACL role model and audit logging.
+- Depends on ACL role model, audit logging, and bootstrap Owner login.
 
 ## EPIC Files
 
@@ -51,6 +52,7 @@ Allow Owner to create, update, suspend, and audit internal staff accounts so eve
 
 ## User Story Files
 
+- [ ] [USR-EP1-US0: Bootstrap Owner Login](stories/USR-EP1-US0_bootstrap_owner_login.md)
 - [ ] [USR-EP1-US1: Create Staff User](stories/USR-EP1-US1_create_staff_user.md)
 - [ ] [USR-EP1-US2: Update Staff Details and Role](stories/USR-EP1-US2_update_staff_details_and_role.md)
 - [ ] [USR-EP2-US1: Suspend Staff Access](stories/USR-EP2-US1_suspend_staff_access.md)
@@ -58,6 +60,12 @@ Allow Owner to create, update, suspend, and audit internal staff accounts so eve
 
 ## Task Implementation Plans
 
+- [ ] [USR-EP1-US0-FE1](tasks/USR-EP1-US0-FE1.md): Build login page from design guide.
+- [ ] [USR-EP1-US0-FE2](tasks/USR-EP1-US0-FE2.md): Store session securely and load current user from real token.
+- [ ] [USR-EP1-US0-FE3](tasks/USR-EP1-US0-FE3.md): Add frontend tests for login states and authenticated route access.
+- [ ] [USR-EP1-US0-BE1](tasks/USR-EP1-US0-BE1.md): Add persisted user auth fields and bootstrap Owner seed.
+- [ ] [USR-EP1-US0-BE2](tasks/USR-EP1-US0-BE2.md): Implement login, JWT issuance, and `/auth/me` from token.
+- [ ] [USR-EP1-US0-BE3](tasks/USR-EP1-US0-BE3.md): Add auth tests for login, active status, bad password, suspended/blocking behavior.
 - [ ] [USR-EP1-US1-FE1](tasks/USR-EP1-US1-FE1.md): Build staff user creation form with role and department fields.
 - [ ] [USR-EP1-US1-FE2](tasks/USR-EP1-US1-FE2.md): Show role scope and restricted areas before save.
 - [ ] [USR-EP1-US1-FE3](tasks/USR-EP1-US1-FE3.md): Add tests for required fields, duplicate email error, and role scope preview.
