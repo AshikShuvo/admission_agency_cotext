@@ -1,9 +1,9 @@
 # ACL-EP1-US1-BE1: Implement role permission map for core modules and actions.
 ## Detailed Backend Task Plan
 
-Status: `Not Started`
-Owner: `Unassigned`
-Last updated: `2026-06-04`
+Status: `Complete`
+Owner: `Lorentz`
+Last updated: `2026-06-05`
 
 ## Traceability
 
@@ -28,9 +28,9 @@ This task supports the module goal: Ensure every screen, API, query, and action 
 
 ## Acceptance Criteria Impact
 
-- [ ] Each protected API checks authenticated role before executing mutations.
-- [ ] Non-owner users cannot manage catalog, users, or commissions.
-- [ ] Accounts cannot approve admission or visa stages.
+- [x] Each protected API checks authenticated role before executing mutations.
+- [x] Non-owner users cannot manage catalog, users, or commissions.
+- [x] Accounts cannot approve admission or visa stages.
 
 ## Business Rules To Preserve
 
@@ -70,20 +70,20 @@ This task supports the module goal: Ensure every screen, API, query, and action 
 
 ## Test Plan
 
-- [ ] Add or update automated tests for the normal successful path.
-- [ ] Add or update tests for at least one blocked or invalid path.
-- [ ] Add role/access tests when task touches restricted data or actions.
-- [ ] Confirm test data includes the minimum business objects needed for this story.
-- [ ] Record the test command in the agent handoff note.
+- [x] Add or update automated tests for the normal successful path.
+- [x] Add or update tests for at least one blocked or invalid path.
+- [x] Add role/access tests when task touches restricted data or actions.
+- [x] Confirm test data includes the minimum business objects needed for this story.
+- [x] Record the test command in the agent handoff note.
 
 ## Definition of Done
 
-- [ ] Implementation matches this task plan and the linked story acceptance criteria.
-- [ ] Required UI/API/service behavior is implemented in the correct module boundary.
-- [ ] Authorization and data visibility are enforced where applicable.
-- [ ] Tests are added or an explicit test gap is recorded as a blocker.
-- [ ] This task checkbox is marked complete in the story file and source module summary.
-- [ ] [Progress Tracker](../../../progress_tracker.md) is updated with the completed task count.
+- [x] Implementation matches this task plan and the linked story acceptance criteria.
+- [x] Required UI/API/service behavior is implemented in the correct module boundary.
+- [x] Authorization and data visibility are enforced where applicable.
+- [x] Tests are added or an explicit test gap is recorded as a blocker.
+- [x] This task checkbox is marked complete in the story file and source module summary.
+- [x] [Progress Tracker](../../../progress_tracker.md) is updated with the completed task count.
 
 ## Handoff Note Template
 
