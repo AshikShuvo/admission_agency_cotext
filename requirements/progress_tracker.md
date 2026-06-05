@@ -16,10 +16,10 @@ Use this file to track completion across all requirement modules. Update this tr
 | Area | Planned | Complete | Completion |
 |---|---:|---:|---:|
 | Modules | 12 | 0 | 0% |
-| EPICs | 24 | 0 | 0% |
-| User Stories | 48 | 1 | 2% |
-| Frontend Tasks | 144 | 3 | 2% |
-| Backend Tasks | 144 | 3 | 2% |
+| EPICs | 24 | 1 | 4% |
+| User Stories | 48 | 2 | 4% |
+| Frontend Tasks | 144 | 6 | 4% |
+| Backend Tasks | 144 | 6 | 4% |
 
 ## Module Progress
 
@@ -34,7 +34,7 @@ Use this file to track completion across all requirement modules. Update this tr
 | COM | University Commission Tracking | [COM_university_commission_tracking](modules/COM_university_commission_tracking/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
 | REP | Reporting and Dashboards | [REP_reporting_and_dashboards](modules/REP_reporting_and_dashboards/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
 | NOT | Notifications and Task Follow-up | [NOT_notifications_and_task_follow_up](modules/NOT_notifications_and_task_follow_up/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
-| ACL | Access Control and Role Visibility | [ACL_access_control_and_role_visibility](modules/ACL_access_control_and_role_visibility/index.md) | 0/2 | 1/4 | 3/12 | 3/12 | In Progress | None |
+| ACL | Access Control and Role Visibility | [ACL_access_control_and_role_visibility](modules/ACL_access_control_and_role_visibility/index.md) | 1/2 | 2/4 | 6/12 | 6/12 | In Progress | None |
 | EXC | Exception and File Closure | [EXC_exception_and_file_closure](modules/EXC_exception_and_file_closure/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
 | USR | User Management | [USR_user_management](modules/USR_user_management/index.md) | 0/2 | 0/4 | 0/12 | 0/12 | Not Started | None |
 
@@ -53,3 +53,5 @@ Use this file to track completion across all requirement modules. Update this tr
 | 2026-06-04 | All | Agent map created | Codex | Added routing, task selection, handoff, blocker, and progress-maintenance rules. |
 | 2026-06-04 | All | Initial requirement structure created | Codex | Baseline tracker, no implementation complete yet. |
 | 2026-06-05 | ACL | ACL-EP1-US1 accepted | Codex + Hegel/Lorentz/Gibbs | Added backend permission map, guards, `/auth/me` contract, role-aware frontend workspace/action states, and ACL tests. |
+| 2026-06-05 | ACL | ACL-EP1-US2 accepted | Codex + Turing/Hegel/Zeno | Added stable forbidden API responses, sensitive access-denial audit hook, direct workspace route restrictions, restricted access UI, and API/frontend ACL tests. |
+| 2026-06-05 | ACL | ACL-EP1 accepted | Codex + Turing/Hegel/Zeno | Completed both role-permission stories; next ACL work is EP2 query-level data scope and sensitive field filtering. |
