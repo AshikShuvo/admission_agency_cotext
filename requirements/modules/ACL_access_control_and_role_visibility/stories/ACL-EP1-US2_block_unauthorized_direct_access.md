@@ -1,9 +1,9 @@
 # ACL-EP1-US2: Block Unauthorized Direct Access
 ## Detailed User Story
 
-Status: `Not Started`
-Owner: `Unassigned`
-Last updated: `2026-06-04`
+Status: `Accepted`
+Owner: `Turing / Hegel / Zeno`
+Last updated: `2026-06-05`
 
 ## Traceability
 
@@ -37,9 +37,9 @@ This story must convert the business expectation into a working system behavior 
 
 ## Acceptance Criteria
 
-- [ ] Unauthorized API calls return a clear forbidden response.
-- [ ] Unauthorized frontend routes show restricted access or redirect to allowed dashboard.
-- [ ] Unauthorized attempts can be audited for sensitive resources.
+- [x] Unauthorized API calls return a clear forbidden response.
+- [x] Unauthorized frontend routes show restricted access or redirect to allowed dashboard.
+- [x] Unauthorized attempts can be audited for sensitive resources.
 
 ## Business Rules
 
@@ -53,15 +53,15 @@ This story must convert the business expectation into a working system behavior 
 
 ## Frontend Tasks
 
-- [ ] [ACL-EP1-US2-FE1](../tasks/ACL-EP1-US2-FE1.md): Add protected route wrapper using current user permission data.
-- [ ] [ACL-EP1-US2-FE2](../tasks/ACL-EP1-US2-FE2.md): Build restricted access state for blocked routes.
-- [ ] [ACL-EP1-US2-FE3](../tasks/ACL-EP1-US2-FE3.md): Add tests for direct navigation to unauthorized screens.
+- [x] [ACL-EP1-US2-FE1](../tasks/ACL-EP1-US2-FE1.md): Add protected route wrapper using current user permission data.
+- [x] [ACL-EP1-US2-FE2](../tasks/ACL-EP1-US2-FE2.md): Build restricted access state for blocked routes.
+- [x] [ACL-EP1-US2-FE3](../tasks/ACL-EP1-US2-FE3.md): Add tests for direct navigation to unauthorized screens.
 
 ## Backend Tasks
 
-- [ ] [ACL-EP1-US2-BE1](../tasks/ACL-EP1-US2-BE1.md): Standardize forbidden responses and authorization error handling.
-- [ ] [ACL-EP1-US2-BE2](../tasks/ACL-EP1-US2-BE2.md): Add optional access audit log for sensitive blocked attempts.
-- [ ] [ACL-EP1-US2-BE3](../tasks/ACL-EP1-US2-BE3.md): Add tests for direct forbidden API access.
+- [x] [ACL-EP1-US2-BE1](../tasks/ACL-EP1-US2-BE1.md): Standardize forbidden responses and authorization error handling.
+- [x] [ACL-EP1-US2-BE2](../tasks/ACL-EP1-US2-BE2.md): Add optional access audit log for sensitive blocked attempts.
+- [x] [ACL-EP1-US2-BE3](../tasks/ACL-EP1-US2-BE3.md): Add tests for direct forbidden API access.
 
 ## Cross-Agent Contract
 
@@ -72,17 +72,17 @@ This story must convert the business expectation into a working system behavior 
 
 ## Detailed Acceptance Review Checklist
 
-- [ ] User can complete the happy path described by the story statement.
-- [ ] User sees clear feedback when required data is missing or a workflow gate blocks progress.
-- [ ] Unauthorized roles cannot perform the action through UI or API.
-- [ ] Restricted data is not returned from the backend and is not rendered by the frontend.
-- [ ] Important state changes create audit log or notification events where required by the business rules.
-- [ ] Automated tests cover the success path and at least one failure or restricted path.
+- [x] User can complete the happy path described by the story statement.
+- [x] User sees clear feedback when required data is missing or a workflow gate blocks progress.
+- [x] Unauthorized roles cannot perform the action through UI or API.
+- [x] Restricted data is not returned from the backend and is not rendered by the frontend.
+- [x] Important state changes create audit log or notification events where required by the business rules.
+- [x] Automated tests cover the success path and at least one failure or restricted path.
 
 ## Completion Rules
 
-- [ ] All linked frontend tasks are complete.
-- [ ] All linked backend tasks are complete.
-- [ ] Acceptance criteria are verified by QA/review.
-- [ ] Story count is updated in [Progress Tracker](../../../progress_tracker.md).
-- [ ] EPIC progress is recalculated after this story is accepted.
+- [x] All linked frontend tasks are complete.
+- [x] All linked backend tasks are complete.
+- [x] Acceptance criteria are verified by QA/review.
+- [x] Story count is updated in [Progress Tracker](../../../progress_tracker.md).
+- [x] EPIC progress is recalculated after this story is accepted.

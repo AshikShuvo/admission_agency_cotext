@@ -1,8 +1,8 @@
 # ACL-EP1: Role Permissions
 ## Detailed EPIC
 
-Status: `In Progress`
-Owner: `Hegel / Lorentz / Gibbs`
+Status: `Completed`
+Owner: `Turing / Hegel / Zeno`
 Last updated: `2026-06-05`
 
 ## Module Context
@@ -38,7 +38,7 @@ Deliver this capability area as a coherent business workflow, not as isolated sc
 ## User Stories
 
 - [x] [ACL-EP1-US1: Enforce Role Permissions](../stories/ACL-EP1-US1_enforce_role_permissions.md)
-- [ ] [ACL-EP1-US2: Block Unauthorized Direct Access](../stories/ACL-EP1-US2_block_unauthorized_direct_access.md)
+- [x] [ACL-EP1-US2: Block Unauthorized Direct Access](../stories/ACL-EP1-US2_block_unauthorized_direct_access.md)
 
 ## Implementation Expectations
 
@@ -49,9 +49,9 @@ Deliver this capability area as a coherent business workflow, not as isolated sc
 
 ## EPIC Acceptance Criteria
 
-- [ ] All linked user stories are complete.
-- [ ] All frontend and backend tasks under those stories are complete.
-- [ ] Automated tests cover the highest-risk workflow rules in this EPIC.
-- [ ] Role access and sensitive-data behavior are verified.
-- [ ] No open blocker remains for this EPIC.
-- [ ] EPIC completion is recorded in [Progress Tracker](../../../progress_tracker.md).
+- [x] All linked user stories are complete.
+- [x] All frontend and backend tasks under those stories are complete.
+- [x] Automated tests cover the highest-risk workflow rules in this EPIC.
+- [x] Role access and sensitive-data behavior are verified.
+- [x] No open blocker remains for this EPIC.
+- [x] EPIC completion is recorded in [Progress Tracker](../../../progress_tracker.md).
